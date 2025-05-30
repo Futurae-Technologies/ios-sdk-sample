@@ -1,0 +1,1914 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		075A24672DE45A8700C8D0F2 /* SDKConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A24662DE45A8700C8D0F2 /* SDKConfiguration.swift */; };
+		075A24682DE45A8700C8D0F2 /* SDKConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A24662DE45A8700C8D0F2 /* SDKConfiguration.swift */; };
+		0767432F2DE9CAEA00D4E377 /* FuturaeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0767432E2DE9CAEA00D4E377 /* FuturaeKit */; };
+		076743322DE9CAF700D4E377 /* AdaptiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = 076743312DE9CAF700D4E377 /* AdaptiveKit */; };
+		076CCFBC2DE9CD7E004B1890 /* FuturaeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 076CCFBB2DE9CD7E004B1890 /* FuturaeKit */; };
+		076CCFBE2DE9CD7E004B1890 /* AdaptiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = 076CCFBD2DE9CD7E004B1890 /* AdaptiveKit */; };
+		07754E0F2DDFD39700280654 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754E0D2DDFD39700280654 /* MainTabView.swift */; };
+		07754E102DDFD39700280654 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DD32DDFD39700280654 /* SettingsViewModel.swift */; };
+		07754E112DDFD39700280654 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DFF2DDFD39700280654 /* RoundedButton.swift */; };
+		07754E132DDFD39700280654 /* DemoAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DDB2DDFD39700280654 /* DemoAppError.swift */; };
+		07754E142DDFD39700280654 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF02DDFD39700280654 /* Font+.swift */; };
+		07754E152DDFD39700280654 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754E052DDFD39700280654 /* Notifications.swift */; };
+		07754E162DDFD39700280654 /* SDKUnlockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DD62DDFD39700280654 /* SDKUnlockViewModel.swift */; };
+		07754E172DDFD39700280654 /* TextDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754E002DDFD39700280654 /* TextDetailView.swift */; };
+		07754E182DDFD39700280654 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DB72DDFD39700280654 /* AccountsView.swift */; };
+		07754E192DDFD39700280654 /* AccountMigrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DAF2DDFD39700280654 /* AccountMigrationViewModel.swift */; };
+		07754E1A2DDFD39700280654 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DB32DDFD39700280654 /* BannerView.swift */; };
+		07754E1B2DDFD39700280654 /* FuturaeSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754E0B2DDFD39700280654 /* FuturaeSampleApp.swift */; };
+		07754E1C2DDFD39700280654 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DD22DDFD39700280654 /* SettingsView.swift */; };
+		07754E1D2DDFD39700280654 /* AdaptiveDebugStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF42DDFD39700280654 /* AdaptiveDebugStorage.swift */; };
+		07754E1E2DDFD39700280654 /* KeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DFC2DDFD39700280654 /* KeypadView.swift */; };
+		07754E202DDFD39700280654 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DFB2DDFD39700280654 /* HeaderView.swift */; };
+		07754E212DDFD39700280654 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DD02DDFD39700280654 /* MoreView.swift */; };
+		07754E222DDFD39700280654 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DB82DDFD39700280654 /* AccountsViewModel.swift */; };
+		07754E232DDFD39700280654 /* AdaptiveCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DCC2DDFD39700280654 /* AdaptiveCollectionsView.swift */; };
+		07754E242DDFD39700280654 /* AuthApprovalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DBB2DDFD39700280654 /* AuthApprovalViewModel.swift */; };
+		07754E252DDFD39700280654 /* AccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DB12DDFD39700280654 /* AccountRowView.swift */; };
+		07754E262DDFD39700280654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754E082DDFD39700280654 /* AppDelegate.swift */; };
+		07754E272DDFD39700280654 /* AccountHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DB62DDFD39700280654 /* AccountHistoryViewModel.swift */; };
+		07754E282DDFD39700280654 /* SDKConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DBD2DDFD39700280654 /* SDKConfigurationView.swift */; };
+		07754E292DDFD39700280654 /* SDKUnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DD52DDFD39700280654 /* SDKUnlockView.swift */; };
+		07754E2A2DDFD39700280654 /* FloatingUnlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF92DDFD39700280654 /* FloatingUnlockButton.swift */; };
+		07754E2B2DDFD39700280654 /* EnrollmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DC12DDFD39700280654 /* EnrollmentViewModel.swift */; };
+		07754E2C2DDFD39700280654 /* ManualEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DC32DDFD39700280654 /* ManualEntryView.swift */; };
+		07754E2D2DDFD39700280654 /* FuturaeSDKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DE82DDFD39700280654 /* FuturaeSDKClient.swift */; };
+		07754E2E2DDFD39700280654 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DEF2DDFD39700280654 /* Color+.swift */; };
+		07754E2F2DDFD39700280654 /* EmptyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF82DDFD39700280654 /* EmptyInfoView.swift */; };
+		07754E302DDFD39700280654 /* AccountActivityItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DD92DDFD39700280654 /* AccountActivityItem.swift */; };
+		07754E312DDFD39700280654 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DFE2DDFD39700280654 /* PinView.swift */; };
+		07754E322DDFD39700280654 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DFD2DDFD39700280654 /* LoadingView.swift */; };
+		07754E332DDFD39700280654 /* QRScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DCA2DDFD39700280654 /* QRScannerViewModel.swift */; };
+		07754E342DDFD39700280654 /* AuthApprovalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DBA2DDFD39700280654 /* AuthApprovalView.swift */; };
+		07754E352DDFD39700280654 /* FuturaeSDKClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DEB2DDFD39700280654 /* FuturaeSDKClientProtocol.swift */; };
+		07754E362DDFD39700280654 /* AdaptivePermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DCD2DDFD39700280654 /* AdaptivePermissionsView.swift */; };
+		07754E382DDFD39700280654 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF22DDFD39700280654 /* String+.swift */; };
+		07754E392DDFD39700280654 /* ManualEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DC42DDFD39700280654 /* ManualEntryViewModel.swift */; };
+		07754E3A2DDFD39700280654 /* ActivityRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DB22DDFD39700280654 /* ActivityRowView.swift */; };
+		07754E3C2DDFD39700280654 /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF12DDFD39700280654 /* Image+.swift */; };
+		07754E3D2DDFD39700280654 /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DDA2DDFD39700280654 /* AccountItem.swift */; };
+		07754E3F2DDFD39700280654 /* AdaptiveDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754E022DDFD39700280654 /* AdaptiveDelegate.swift */; };
+		07754E402DDFD39700280654 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DC62DDFD39700280654 /* CameraPreview.swift */; };
+		07754E422DDFD39700280654 /* UsernamelessAccountSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DC72DDFD39700280654 /* UsernamelessAccountSelectorView.swift */; };
+		07754E442DDFD39700280654 /* EnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DC02DDFD39700280654 /* EnrollmentView.swift */; };
+		07754E452DDFD39700280654 /* SDKFunctionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DD12DDFD39700280654 /* SDKFunctionsView.swift */; };
+		07754E462DDFD39700280654 /* SDKConfigurationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DBE2DDFD39700280654 /* SDKConfigurationViewModel.swift */; };
+		07754E472DDFD39700280654 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DC92DDFD39700280654 /* QRScannerView.swift */; };
+		07754E482DDFD39700280654 /* AccountHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DB52DDFD39700280654 /* AccountHistoryView.swift */; };
+		07754E4A2DDFD39700280654 /* FileEncryptUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF52DDFD39700280654 /* FileEncryptUtility.swift */; };
+		07754E4B2DDFD39700280654 /* FileStorageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF62DDFD39700280654 /* FileStorageUtility.swift */; };
+		07754E4C2DDFD39700280654 /* AdaptivePermissionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DCE2DDFD39700280654 /* AdaptivePermissionsViewModel.swift */; };
+		07754E4D2DDFD39700280654 /* GlobalPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754E042DDFD39700280654 /* GlobalPreferences.swift */; };
+		07754E4E2DDFD39700280654 /* AccountMigrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DAE2DDFD39700280654 /* AccountMigrationView.swift */; };
+		07754E4F2DDFD39700280654 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754E032DDFD39700280654 /* AppRoute.swift */; };
+		07754E502DDFD39700280654 /* FlowBindingTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DFA2DDFD39700280654 /* FlowBindingTokenView.swift */; };
+		07754E512DDFD39700280654 /* FuturaeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DED2DDFD39700280654 /* FuturaeService.swift */; };
+		07754E532DDFD39700280654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07754E092DDFD39700280654 /* Assets.xcassets */; };
+		07754E622DDFD87500280654 /* notifications.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 07754E5B2DDFD87500280654 /* notifications.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		07754E6C2DDFD90C00280654 /* GlobalPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754E042DDFD39700280654 /* GlobalPreferences.swift */; };
+		07754E6D2DDFD91300280654 /* FuturaeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DED2DDFD39700280654 /* FuturaeService.swift */; };
+		07754E6E2DDFD91800280654 /* FuturaeSDKClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DEB2DDFD39700280654 /* FuturaeSDKClientProtocol.swift */; };
+		07754E6F2DDFD91800280654 /* FuturaeSDKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DE82DDFD39700280654 /* FuturaeSDKClient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07754E602DDFD87500280654 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07135A132D6F35EE004C84A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07754E5A2DDFD87500280654;
+			remoteInfo = notifications;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0736C44F2D87ABDB00932FC7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				07754E622DDFD87500280654 /* notifications.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		075A24592DE4554B00C8D0F2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07754E772DDFD95300280654 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07135A1B2D6F35EE004C84A1 /* FuturaeSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuturaeSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		075A24662DE45A8700C8D0F2 /* SDKConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKConfiguration.swift; sourceTree = "<group>"; };
+		0767431A2DE98AB500D4E377 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0767431C2DE98B5000D4E377 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0767431E2DE98C1B00D4E377 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		076743202DE98D6A00D4E377 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		076743222DE98E2C00D4E377 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		076743262DE995E000D4E377 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		076743282DE997CB00D4E377 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0767432A2DE9999700D4E377 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0767432B2DE9BEE200D4E377 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		07754DAE2DDFD39700280654 /* AccountMigrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMigrationView.swift; sourceTree = "<group>"; };
+		07754DAF2DDFD39700280654 /* AccountMigrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMigrationViewModel.swift; sourceTree = "<group>"; };
+		07754DB12DDFD39700280654 /* AccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowView.swift; sourceTree = "<group>"; };
+		07754DB22DDFD39700280654 /* ActivityRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRowView.swift; sourceTree = "<group>"; };
+		07754DB32DDFD39700280654 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		07754DB52DDFD39700280654 /* AccountHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHistoryView.swift; sourceTree = "<group>"; };
+		07754DB62DDFD39700280654 /* AccountHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHistoryViewModel.swift; sourceTree = "<group>"; };
+		07754DB72DDFD39700280654 /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
+		07754DB82DDFD39700280654 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		07754DBA2DDFD39700280654 /* AuthApprovalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApprovalView.swift; sourceTree = "<group>"; };
+		07754DBB2DDFD39700280654 /* AuthApprovalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApprovalViewModel.swift; sourceTree = "<group>"; };
+		07754DBD2DDFD39700280654 /* SDKConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKConfigurationView.swift; sourceTree = "<group>"; };
+		07754DBE2DDFD39700280654 /* SDKConfigurationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKConfigurationViewModel.swift; sourceTree = "<group>"; };
+		07754DC02DDFD39700280654 /* EnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentView.swift; sourceTree = "<group>"; };
+		07754DC12DDFD39700280654 /* EnrollmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentViewModel.swift; sourceTree = "<group>"; };
+		07754DC32DDFD39700280654 /* ManualEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualEntryView.swift; sourceTree = "<group>"; };
+		07754DC42DDFD39700280654 /* ManualEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualEntryViewModel.swift; sourceTree = "<group>"; };
+		07754DC62DDFD39700280654 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		07754DC72DDFD39700280654 /* UsernamelessAccountSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernamelessAccountSelectorView.swift; sourceTree = "<group>"; };
+		07754DC92DDFD39700280654 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		07754DCA2DDFD39700280654 /* QRScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewModel.swift; sourceTree = "<group>"; };
+		07754DCC2DDFD39700280654 /* AdaptiveCollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveCollectionsView.swift; sourceTree = "<group>"; };
+		07754DCD2DDFD39700280654 /* AdaptivePermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptivePermissionsView.swift; sourceTree = "<group>"; };
+		07754DCE2DDFD39700280654 /* AdaptivePermissionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptivePermissionsViewModel.swift; sourceTree = "<group>"; };
+		07754DD02DDFD39700280654 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		07754DD12DDFD39700280654 /* SDKFunctionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKFunctionsView.swift; sourceTree = "<group>"; };
+		07754DD22DDFD39700280654 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		07754DD32DDFD39700280654 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		07754DD52DDFD39700280654 /* SDKUnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKUnlockView.swift; sourceTree = "<group>"; };
+		07754DD62DDFD39700280654 /* SDKUnlockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKUnlockViewModel.swift; sourceTree = "<group>"; };
+		07754DD92DDFD39700280654 /* AccountActivityItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActivityItem.swift; sourceTree = "<group>"; };
+		07754DDA2DDFD39700280654 /* AccountItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountItem.swift; sourceTree = "<group>"; };
+		07754DDB2DDFD39700280654 /* DemoAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppError.swift; sourceTree = "<group>"; };
+		07754DE82DDFD39700280654 /* FuturaeSDKClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturaeSDKClient.swift; sourceTree = "<group>"; };
+		07754DE92DDFD39700280654 /* SDKConfigurationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKConfigurationData.swift; sourceTree = "<group>"; };
+		07754DEB2DDFD39700280654 /* FuturaeSDKClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturaeSDKClientProtocol.swift; sourceTree = "<group>"; };
+		07754DED2DDFD39700280654 /* FuturaeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturaeService.swift; sourceTree = "<group>"; };
+		07754DEF2DDFD39700280654 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		07754DF02DDFD39700280654 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		07754DF12DDFD39700280654 /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
+		07754DF22DDFD39700280654 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		07754DF42DDFD39700280654 /* AdaptiveDebugStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveDebugStorage.swift; sourceTree = "<group>"; };
+		07754DF52DDFD39700280654 /* FileEncryptUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileEncryptUtility.swift; sourceTree = "<group>"; };
+		07754DF62DDFD39700280654 /* FileStorageUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageUtility.swift; sourceTree = "<group>"; };
+		07754DF82DDFD39700280654 /* EmptyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyInfoView.swift; sourceTree = "<group>"; };
+		07754DF92DDFD39700280654 /* FloatingUnlockButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingUnlockButton.swift; sourceTree = "<group>"; };
+		07754DFA2DDFD39700280654 /* FlowBindingTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowBindingTokenView.swift; sourceTree = "<group>"; };
+		07754DFB2DDFD39700280654 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		07754DFC2DDFD39700280654 /* KeypadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadView.swift; sourceTree = "<group>"; };
+		07754DFD2DDFD39700280654 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		07754DFE2DDFD39700280654 /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
+		07754DFF2DDFD39700280654 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		07754E002DDFD39700280654 /* TextDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDetailView.swift; sourceTree = "<group>"; };
+		07754E022DDFD39700280654 /* AdaptiveDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveDelegate.swift; sourceTree = "<group>"; };
+		07754E032DDFD39700280654 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		07754E042DDFD39700280654 /* GlobalPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalPreferences.swift; sourceTree = "<group>"; };
+		07754E052DDFD39700280654 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		07754E082DDFD39700280654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07754E092DDFD39700280654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07754E0A2DDFD39700280654 /* FuturaeSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FuturaeSampleApp.entitlements; sourceTree = "<group>"; };
+		07754E0B2DDFD39700280654 /* FuturaeSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturaeSampleApp.swift; sourceTree = "<group>"; };
+		07754E0C2DDFD39700280654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07754E0D2DDFD39700280654 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		07754E5B2DDFD87500280654 /* notifications.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = notifications.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		07754E632DDFD87500280654 /* Exceptions for "notifications" folder in "notifications" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 07754E5A2DDFD87500280654 /* notifications */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		07754E5C2DDFD87500280654 /* notifications */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				07754E632DDFD87500280654 /* Exceptions for "notifications" folder in "notifications" target */,
+			);
+			path = notifications;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07135A182D6F35EE004C84A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0767432F2DE9CAEA00D4E377 /* FuturaeKit in Frameworks */,
+				076743322DE9CAF700D4E377 /* AdaptiveKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07754E582DDFD87500280654 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076CCFBC2DE9CD7E004B1890 /* FuturaeKit in Frameworks */,
+				076CCFBE2DE9CD7E004B1890 /* AdaptiveKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07135A122D6F35EE004C84A1 = {
+			isa = PBXGroup;
+			children = (
+				0767432A2DE9999700D4E377 /* README.md */,
+				07754E0E2DDFD39700280654 /* FuturaeSampleApp */,
+				07754E5C2DDFD87500280654 /* notifications */,
+				076CCFBA2DE9CD7E004B1890 /* Frameworks */,
+				07135A1C2D6F35EE004C84A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07135A1C2D6F35EE004C84A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07135A1B2D6F35EE004C84A1 /* FuturaeSampleApp.app */,
+				07754E5B2DDFD87500280654 /* notifications.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		076CCFBA2DE9CD7E004B1890 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07754DB02DDFD39700280654 /* AccountMigration */ = {
+			isa = PBXGroup;
+			children = (
+				0767431A2DE98AB500D4E377 /* README.md */,
+				07754DAE2DDFD39700280654 /* AccountMigrationView.swift */,
+				07754DAF2DDFD39700280654 /* AccountMigrationViewModel.swift */,
+			);
+			path = AccountMigration;
+			sourceTree = "<group>";
+		};
+		07754DB42DDFD39700280654 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07754DB12DDFD39700280654 /* AccountRowView.swift */,
+				07754DB22DDFD39700280654 /* ActivityRowView.swift */,
+				07754DB32DDFD39700280654 /* BannerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		07754DB92DDFD39700280654 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				076743222DE98E2C00D4E377 /* README.md */,
+				07754DB42DDFD39700280654 /* Views */,
+				07754DB52DDFD39700280654 /* AccountHistoryView.swift */,
+				07754DB62DDFD39700280654 /* AccountHistoryViewModel.swift */,
+				07754DB72DDFD39700280654 /* AccountsView.swift */,
+				07754DB82DDFD39700280654 /* AccountsViewModel.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		07754DBC2DDFD39700280654 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				076743282DE997CB00D4E377 /* README.md */,
+				07754DBA2DDFD39700280654 /* AuthApprovalView.swift */,
+				07754DBB2DDFD39700280654 /* AuthApprovalViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		07754DBF2DDFD39700280654 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				076743262DE995E000D4E377 /* README.md */,
+				07754DBD2DDFD39700280654 /* SDKConfigurationView.swift */,
+				07754DBE2DDFD39700280654 /* SDKConfigurationViewModel.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		07754DC22DDFD39700280654 /* Enrollment */ = {
+			isa = PBXGroup;
+			children = (
+				0767432B2DE9BEE200D4E377 /* README.md */,
+				07754DC02DDFD39700280654 /* EnrollmentView.swift */,
+				07754DC12DDFD39700280654 /* EnrollmentViewModel.swift */,
+			);
+			path = Enrollment;
+			sourceTree = "<group>";
+		};
+		07754DC52DDFD39700280654 /* ManualEntry */ = {
+			isa = PBXGroup;
+			children = (
+				076743202DE98D6A00D4E377 /* README.md */,
+				07754DC32DDFD39700280654 /* ManualEntryView.swift */,
+				07754DC42DDFD39700280654 /* ManualEntryViewModel.swift */,
+			);
+			path = ManualEntry;
+			sourceTree = "<group>";
+		};
+		07754DC82DDFD39700280654 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07754DC62DDFD39700280654 /* CameraPreview.swift */,
+				07754DC72DDFD39700280654 /* UsernamelessAccountSelectorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		07754DCB2DDFD39700280654 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				0767431E2DE98C1B00D4E377 /* README.md */,
+				07754DC82DDFD39700280654 /* Views */,
+				07754DC92DDFD39700280654 /* QRScannerView.swift */,
+				07754DCA2DDFD39700280654 /* QRScannerViewModel.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		07754DCF2DDFD39700280654 /* Adaptive */ = {
+			isa = PBXGroup;
+			children = (
+				07754DCC2DDFD39700280654 /* AdaptiveCollectionsView.swift */,
+				07754DCD2DDFD39700280654 /* AdaptivePermissionsView.swift */,
+				07754DCE2DDFD39700280654 /* AdaptivePermissionsViewModel.swift */,
+			);
+			path = Adaptive;
+			sourceTree = "<group>";
+		};
+		07754DD42DDFD39700280654 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				07754DCF2DDFD39700280654 /* Adaptive */,
+				07754DD02DDFD39700280654 /* MoreView.swift */,
+				07754DD12DDFD39700280654 /* SDKFunctionsView.swift */,
+				07754DD22DDFD39700280654 /* SettingsView.swift */,
+				07754DD32DDFD39700280654 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		07754DD72DDFD39700280654 /* Unlock */ = {
+			isa = PBXGroup;
+			children = (
+				0767431C2DE98B5000D4E377 /* README.md */,
+				07754DD52DDFD39700280654 /* SDKUnlockView.swift */,
+				07754DD62DDFD39700280654 /* SDKUnlockViewModel.swift */,
+			);
+			path = Unlock;
+			sourceTree = "<group>";
+		};
+		07754DD82DDFD39700280654 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				07754DB02DDFD39700280654 /* AccountMigration */,
+				07754DB92DDFD39700280654 /* Accounts */,
+				07754DBC2DDFD39700280654 /* Authentication */,
+				07754DBF2DDFD39700280654 /* Configuration */,
+				07754DC22DDFD39700280654 /* Enrollment */,
+				07754DC52DDFD39700280654 /* ManualEntry */,
+				07754DCB2DDFD39700280654 /* QRCode */,
+				07754DD42DDFD39700280654 /* Settings */,
+				07754DD72DDFD39700280654 /* Unlock */,
+				07754E562DDFD81400280654 /* Tabs */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		07754DDC2DDFD39700280654 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07754DD92DDFD39700280654 /* AccountActivityItem.swift */,
+				07754DDA2DDFD39700280654 /* AccountItem.swift */,
+				07754DDB2DDFD39700280654 /* DemoAppError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07754DEC2DDFD39700280654 /* Futurae */ = {
+			isa = PBXGroup;
+			children = (
+				07754DED2DDFD39700280654 /* FuturaeService.swift */,
+				07754DE82DDFD39700280654 /* FuturaeSDKClient.swift */,
+				07754DEB2DDFD39700280654 /* FuturaeSDKClientProtocol.swift */,
+				07754DE92DDFD39700280654 /* SDKConfigurationData.swift */,
+			);
+			path = Futurae;
+			sourceTree = "<group>";
+		};
+		07754DEE2DDFD39700280654 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				07754DEC2DDFD39700280654 /* Futurae */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		07754DF32DDFD39700280654 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07754DEF2DDFD39700280654 /* Color+.swift */,
+				07754DF02DDFD39700280654 /* Font+.swift */,
+				07754DF12DDFD39700280654 /* Image+.swift */,
+				07754DF22DDFD39700280654 /* String+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		07754DF72DDFD39700280654 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				07754DF42DDFD39700280654 /* AdaptiveDebugStorage.swift */,
+				07754DF52DDFD39700280654 /* FileEncryptUtility.swift */,
+				07754DF62DDFD39700280654 /* FileStorageUtility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		07754E012DDFD39700280654 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07754DF82DDFD39700280654 /* EmptyInfoView.swift */,
+				07754DF92DDFD39700280654 /* FloatingUnlockButton.swift */,
+				07754DFA2DDFD39700280654 /* FlowBindingTokenView.swift */,
+				07754DFB2DDFD39700280654 /* HeaderView.swift */,
+				07754DFC2DDFD39700280654 /* KeypadView.swift */,
+				07754DFD2DDFD39700280654 /* LoadingView.swift */,
+				07754DFE2DDFD39700280654 /* PinView.swift */,
+				07754DFF2DDFD39700280654 /* RoundedButton.swift */,
+				07754E002DDFD39700280654 /* TextDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		07754E072DDFD39700280654 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				07754DF32DDFD39700280654 /* Extensions */,
+				07754DF72DDFD39700280654 /* Utilities */,
+				07754E012DDFD39700280654 /* Views */,
+				07754E022DDFD39700280654 /* AdaptiveDelegate.swift */,
+				07754E032DDFD39700280654 /* AppRoute.swift */,
+				07754E042DDFD39700280654 /* GlobalPreferences.swift */,
+				07754E052DDFD39700280654 /* Notifications.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		07754E0E2DDFD39700280654 /* FuturaeSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				07754E552DDFD69B00280654 /* Resources */,
+				07754DD82DDFD39700280654 /* Features */,
+				07754DDC2DDFD39700280654 /* Models */,
+				07754DEE2DDFD39700280654 /* Services */,
+				07754E072DDFD39700280654 /* Common */,
+				07754E0B2DDFD39700280654 /* FuturaeSampleApp.swift */,
+				07754E082DDFD39700280654 /* AppDelegate.swift */,
+				075A24662DE45A8700C8D0F2 /* SDKConfiguration.swift */,
+			);
+			path = FuturaeSampleApp;
+			sourceTree = "<group>";
+		};
+		07754E552DDFD69B00280654 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07754E092DDFD39700280654 /* Assets.xcassets */,
+				07754E0A2DDFD39700280654 /* FuturaeSampleApp.entitlements */,
+				07754E0C2DDFD39700280654 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07754E562DDFD81400280654 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				07754E0D2DDFD39700280654 /* MainTabView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07135A1A2D6F35EE004C84A1 /* FuturaeSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07135A292D6F35F0004C84A1 /* Build configuration list for PBXNativeTarget "FuturaeSampleApp" */;
+			buildPhases = (
+				07135A182D6F35EE004C84A1 /* Frameworks */,
+				07135A172D6F35EE004C84A1 /* Sources */,
+				07135A192D6F35EE004C84A1 /* Resources */,
+				0736C44F2D87ABDB00932FC7 /* Embed Foundation Extensions */,
+				075A24592DE4554B00C8D0F2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07754E612DDFD87500280654 /* PBXTargetDependency */,
+			);
+			name = FuturaeSampleApp;
+			packageProductDependencies = (
+				0767432E2DE9CAEA00D4E377 /* FuturaeKit */,
+				076743312DE9CAF700D4E377 /* AdaptiveKit */,
+			);
+			productName = FuturaeDemoApp;
+			productReference = 07135A1B2D6F35EE004C84A1 /* FuturaeSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07754E5A2DDFD87500280654 /* notifications */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07754E642DDFD87500280654 /* Build configuration list for PBXNativeTarget "notifications" */;
+			buildPhases = (
+				07754E572DDFD87500280654 /* Sources */,
+				07754E582DDFD87500280654 /* Frameworks */,
+				07754E592DDFD87500280654 /* Resources */,
+				07754E772DDFD95300280654 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				07754E5C2DDFD87500280654 /* notifications */,
+			);
+			name = notifications;
+			packageProductDependencies = (
+				076CCFBB2DE9CD7E004B1890 /* FuturaeKit */,
+				076CCFBD2DE9CD7E004B1890 /* AdaptiveKit */,
+			);
+			productName = notifications;
+			productReference = 07754E5B2DDFD87500280654 /* notifications.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07135A132D6F35EE004C84A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					07135A1A2D6F35EE004C84A1 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					07754E5A2DDFD87500280654 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+				};
+			};
+			buildConfigurationList = 07135A162D6F35EE004C84A1 /* Build configuration list for PBXProject "FuturaeSampleApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07135A122D6F35EE004C84A1;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0767432D2DE9CAEA00D4E377 /* XCRemoteSwiftPackageReference "ios-sdk-beta" */,
+				076743302DE9CAF700D4E377 /* XCRemoteSwiftPackageReference "ios-adaptive-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 07135A1C2D6F35EE004C84A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07135A1A2D6F35EE004C84A1 /* FuturaeSampleApp */,
+				07754E5A2DDFD87500280654 /* notifications */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07135A192D6F35EE004C84A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07754E532DDFD39700280654 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07754E592DDFD87500280654 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07135A172D6F35EE004C84A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07754E0F2DDFD39700280654 /* MainTabView.swift in Sources */,
+				07754E102DDFD39700280654 /* SettingsViewModel.swift in Sources */,
+				075A24682DE45A8700C8D0F2 /* SDKConfiguration.swift in Sources */,
+				07754E112DDFD39700280654 /* RoundedButton.swift in Sources */,
+				07754E132DDFD39700280654 /* DemoAppError.swift in Sources */,
+				07754E142DDFD39700280654 /* Font+.swift in Sources */,
+				07754E152DDFD39700280654 /* Notifications.swift in Sources */,
+				07754E162DDFD39700280654 /* SDKUnlockViewModel.swift in Sources */,
+				07754E172DDFD39700280654 /* TextDetailView.swift in Sources */,
+				07754E182DDFD39700280654 /* AccountsView.swift in Sources */,
+				07754E192DDFD39700280654 /* AccountMigrationViewModel.swift in Sources */,
+				07754E1A2DDFD39700280654 /* BannerView.swift in Sources */,
+				07754E1B2DDFD39700280654 /* FuturaeSampleApp.swift in Sources */,
+				07754E1C2DDFD39700280654 /* SettingsView.swift in Sources */,
+				07754E1D2DDFD39700280654 /* AdaptiveDebugStorage.swift in Sources */,
+				07754E1E2DDFD39700280654 /* KeypadView.swift in Sources */,
+				07754E202DDFD39700280654 /* HeaderView.swift in Sources */,
+				07754E212DDFD39700280654 /* MoreView.swift in Sources */,
+				07754E222DDFD39700280654 /* AccountsViewModel.swift in Sources */,
+				07754E232DDFD39700280654 /* AdaptiveCollectionsView.swift in Sources */,
+				07754E242DDFD39700280654 /* AuthApprovalViewModel.swift in Sources */,
+				07754E252DDFD39700280654 /* AccountRowView.swift in Sources */,
+				07754E262DDFD39700280654 /* AppDelegate.swift in Sources */,
+				07754E272DDFD39700280654 /* AccountHistoryViewModel.swift in Sources */,
+				07754E282DDFD39700280654 /* SDKConfigurationView.swift in Sources */,
+				07754E292DDFD39700280654 /* SDKUnlockView.swift in Sources */,
+				07754E2A2DDFD39700280654 /* FloatingUnlockButton.swift in Sources */,
+				07754E2B2DDFD39700280654 /* EnrollmentViewModel.swift in Sources */,
+				07754E2C2DDFD39700280654 /* ManualEntryView.swift in Sources */,
+				07754E2D2DDFD39700280654 /* FuturaeSDKClient.swift in Sources */,
+				07754E2E2DDFD39700280654 /* Color+.swift in Sources */,
+				07754E2F2DDFD39700280654 /* EmptyInfoView.swift in Sources */,
+				07754E302DDFD39700280654 /* AccountActivityItem.swift in Sources */,
+				07754E312DDFD39700280654 /* PinView.swift in Sources */,
+				07754E322DDFD39700280654 /* LoadingView.swift in Sources */,
+				07754E332DDFD39700280654 /* QRScannerViewModel.swift in Sources */,
+				07754E342DDFD39700280654 /* AuthApprovalView.swift in Sources */,
+				07754E352DDFD39700280654 /* FuturaeSDKClientProtocol.swift in Sources */,
+				07754E362DDFD39700280654 /* AdaptivePermissionsView.swift in Sources */,
+				07754E382DDFD39700280654 /* String+.swift in Sources */,
+				07754E392DDFD39700280654 /* ManualEntryViewModel.swift in Sources */,
+				07754E3A2DDFD39700280654 /* ActivityRowView.swift in Sources */,
+				07754E3C2DDFD39700280654 /* Image+.swift in Sources */,
+				07754E3D2DDFD39700280654 /* AccountItem.swift in Sources */,
+				07754E3F2DDFD39700280654 /* AdaptiveDelegate.swift in Sources */,
+				07754E402DDFD39700280654 /* CameraPreview.swift in Sources */,
+				07754E422DDFD39700280654 /* UsernamelessAccountSelectorView.swift in Sources */,
+				07754E442DDFD39700280654 /* EnrollmentView.swift in Sources */,
+				07754E452DDFD39700280654 /* SDKFunctionsView.swift in Sources */,
+				07754E462DDFD39700280654 /* SDKConfigurationViewModel.swift in Sources */,
+				07754E472DDFD39700280654 /* QRScannerView.swift in Sources */,
+				07754E482DDFD39700280654 /* AccountHistoryView.swift in Sources */,
+				07754E4A2DDFD39700280654 /* FileEncryptUtility.swift in Sources */,
+				07754E4B2DDFD39700280654 /* FileStorageUtility.swift in Sources */,
+				07754E4C2DDFD39700280654 /* AdaptivePermissionsViewModel.swift in Sources */,
+				07754E4D2DDFD39700280654 /* GlobalPreferences.swift in Sources */,
+				07754E4E2DDFD39700280654 /* AccountMigrationView.swift in Sources */,
+				07754E4F2DDFD39700280654 /* AppRoute.swift in Sources */,
+				07754E502DDFD39700280654 /* FlowBindingTokenView.swift in Sources */,
+				07754E512DDFD39700280654 /* FuturaeService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07754E572DDFD87500280654 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075A24672DE45A8700C8D0F2 /* SDKConfiguration.swift in Sources */,
+				07754E6C2DDFD90C00280654 /* GlobalPreferences.swift in Sources */,
+				07754E6D2DDFD91300280654 /* FuturaeService.swift in Sources */,
+				07754E6E2DDFD91800280654 /* FuturaeSDKClientProtocol.swift in Sources */,
+				07754E6F2DDFD91800280654 /* FuturaeSDKClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07754E612DDFD87500280654 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07754E5A2DDFD87500280654 /* notifications */;
+			targetProxy = 07754E602DDFD87500280654 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07135A272D6F35F0004C84A1 /* DevelopmentDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = DevelopmentDebug;
+		};
+		07135A282D6F35F0004C84A1 /* DevelopmentRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = DevelopmentRelease;
+		};
+		07135A2A2D6F35F0004C84A1 /* DevelopmentDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FuturaeSampleApp/Resources/FuturaeSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = T82Z6CGNMT;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FuturaeSampleApp/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.6.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DevelopmentDebug;
+		};
+		07135A2B2D6F35F0004C84A1 /* DevelopmentRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FuturaeSampleApp/Resources/FuturaeSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T82Z6CGNMT;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FuturaeSampleApp/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.6.7;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "FuturaeDemo adhoc";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DevelopmentRelease;
+		};
+		0757D3C32D70B38F00800E7C /* TestDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = TestDebug;
+		};
+		0757D3C42D70B38F00800E7C /* TestDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FuturaeSampleApp/Resources/FuturaeSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = T82Z6CGNMT;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FuturaeSampleApp/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.6.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = TestDebug;
+		};
+		0757D3C52D70B39900800E7C /* TestRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = TestRelease;
+		};
+		0757D3C62D70B39900800E7C /* TestRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FuturaeSampleApp/Resources/FuturaeSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T82Z6CGNMT;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FuturaeSampleApp/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.6.7;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "FuturaeDemo adhoc";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = TestRelease;
+		};
+		0757D3C72D70B3A200800E7C /* ProductionDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = ProductionDebug;
+		};
+		0757D3C82D70B3A200800E7C /* ProductionDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FuturaeSampleApp/Resources/FuturaeSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = T82Z6CGNMT;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FuturaeSampleApp/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.6.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ProductionDebug;
+		};
+		0757D3C92D70B3AD00800E7C /* ProductionRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = ProductionRelease;
+		};
+		0757D3CA2D70B3AD00800E7C /* ProductionRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FuturaeSampleApp/Resources/FuturaeSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T82Z6CGNMT;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FuturaeSampleApp/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.6.7;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "FuturaeDemo adhoc";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ProductionRelease;
+		};
+		07754E652DDFD87500280654 /* DevelopmentDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = notifications/notifications.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = T82Z6CGNMT;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notifications/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notifications;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 3.6.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DevelopmentDebug;
+		};
+		07754E662DDFD87500280654 /* TestDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = notifications/notifications.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = T82Z6CGNMT;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notifications/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notifications;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 3.6.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = TestDebug;
+		};
+		07754E672DDFD87500280654 /* ProductionDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = notifications/notifications.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = T82Z6CGNMT;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notifications/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notifications;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 3.6.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = ProductionDebug;
+		};
+		07754E682DDFD87500280654 /* ProductionRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = notifications/notifications.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T82Z6CGNMT;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notifications/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notifications;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 3.6.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "FuturaeDemo extension adhoc";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = ProductionRelease;
+		};
+		07754E692DDFD87500280654 /* DevelopmentRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = notifications/notifications.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T82Z6CGNMT;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notifications/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notifications;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 3.6.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "FuturaeDemo extension adhoc";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DevelopmentRelease;
+		};
+		07754E6A2DDFD87500280654 /* TestRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = notifications/notifications.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T82Z6CGNMT;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notifications/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notifications;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 3.6.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurae.FuturaeSample.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "FuturaeDemo extension adhoc";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = TestRelease;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07135A162D6F35EE004C84A1 /* Build configuration list for PBXProject "FuturaeSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07135A272D6F35F0004C84A1 /* DevelopmentDebug */,
+				0757D3C32D70B38F00800E7C /* TestDebug */,
+				0757D3C72D70B3A200800E7C /* ProductionDebug */,
+				0757D3C92D70B3AD00800E7C /* ProductionRelease */,
+				07135A282D6F35F0004C84A1 /* DevelopmentRelease */,
+				0757D3C52D70B39900800E7C /* TestRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = DevelopmentRelease;
+		};
+		07135A292D6F35F0004C84A1 /* Build configuration list for PBXNativeTarget "FuturaeSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07135A2A2D6F35F0004C84A1 /* DevelopmentDebug */,
+				0757D3C42D70B38F00800E7C /* TestDebug */,
+				0757D3C82D70B3A200800E7C /* ProductionDebug */,
+				0757D3CA2D70B3AD00800E7C /* ProductionRelease */,
+				07135A2B2D6F35F0004C84A1 /* DevelopmentRelease */,
+				0757D3C62D70B39900800E7C /* TestRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = DevelopmentRelease;
+		};
+		07754E642DDFD87500280654 /* Build configuration list for PBXNativeTarget "notifications" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07754E652DDFD87500280654 /* DevelopmentDebug */,
+				07754E662DDFD87500280654 /* TestDebug */,
+				07754E672DDFD87500280654 /* ProductionDebug */,
+				07754E682DDFD87500280654 /* ProductionRelease */,
+				07754E692DDFD87500280654 /* DevelopmentRelease */,
+				07754E6A2DDFD87500280654 /* TestRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = DevelopmentRelease;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0767432D2DE9CAEA00D4E377 /* XCRemoteSwiftPackageReference "ios-sdk-beta" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Futurae-Technologies/ios-sdk-beta.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		076743302DE9CAF700D4E377 /* XCRemoteSwiftPackageReference "ios-adaptive-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Futurae-Technologies/ios-adaptive-sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0767432E2DE9CAEA00D4E377 /* FuturaeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0767432D2DE9CAEA00D4E377 /* XCRemoteSwiftPackageReference "ios-sdk-beta" */;
+			productName = FuturaeKit;
+		};
+		076743312DE9CAF700D4E377 /* AdaptiveKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 076743302DE9CAF700D4E377 /* XCRemoteSwiftPackageReference "ios-adaptive-sdk" */;
+			productName = AdaptiveKit;
+		};
+		076CCFBB2DE9CD7E004B1890 /* FuturaeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0767432D2DE9CAEA00D4E377 /* XCRemoteSwiftPackageReference "ios-sdk-beta" */;
+			productName = FuturaeKit;
+		};
+		076CCFBD2DE9CD7E004B1890 /* AdaptiveKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 076743302DE9CAF700D4E377 /* XCRemoteSwiftPackageReference "ios-adaptive-sdk" */;
+			productName = AdaptiveKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 07135A132D6F35EE004C84A1 /* Project object */;
+}
