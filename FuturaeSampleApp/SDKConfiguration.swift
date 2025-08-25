@@ -10,12 +10,14 @@ import Foundation
 import FuturaeKit
 
 struct SDKConstants {
+
     static let appGroup = "group.futuraesample"
     static let keychainAccessGroup = "group.futuraesample"
-    static let sdkId = ""
-    static let sdkKey = ""
-    static let sdkURL = ""
     static let appId = "{TEAMID}.com.futurae.FuturaeSample"
+    
+    static let sdkId = Bundle.main.infoDictionary?["SDK_ID"] as? String ?? ""
+    static let sdkKey = Bundle.main.infoDictionary?["SDK_KEY"] as? String ?? ""
+    static let sdkURL = "https://" + (Bundle.main.infoDictionary?["BASE_URL"] as? String  ?? "")
 }
 
 enum SDKConfigMode {

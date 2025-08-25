@@ -46,7 +46,7 @@
       shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
-      buildConfiguration = "DevelopmentRelease"
+      buildConfiguration = "DevelopmentDebug"
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
@@ -91,7 +91,7 @@
       buildConfiguration = "DevelopmentRelease">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "DevelopmentRelease"
+      buildConfiguration = "TestRelease"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

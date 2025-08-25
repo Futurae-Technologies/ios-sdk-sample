@@ -23,7 +23,7 @@ Alternatively, the SDK can also be integrated using CocoaPods or Carthage. Pleas
 
 To run the sample:
 
--   Open `FuturaeSampleApp/SDKConfiguration.swift` and update it with your SDK credentials (`sdkId`, `sdkKey`, `baseUrl`).
+-   Open `Config.xcconfig` and update it with your SDK credentials (`sdkId`, `sdkKey`, `baseUrl`).
     
 If you're using app extensions (like `UNNotificationServiceExtension`), you must configure `appGroup` and `keychainAccessGroup`, and enable the corresponding entitlements—**Push Notifications**, **Keychain Sharing**, and **App Groups**—in the **Signing & Capabilities** tab of your Xcode project.
     
