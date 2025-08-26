@@ -7,6 +7,6 @@
 
 // Configuration settings file format documentation can be found at:
 // https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
-SDK_ID = XXX
-SDK_KEY = XXX
-BASE_URL = api.futurae.com:443
+SDK_ID = $(SDK_ID)
+SDK_KEY = $(SDK_KEY)
+SDK_URL = $(SDK_URL)
