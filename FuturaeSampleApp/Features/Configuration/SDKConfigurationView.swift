@@ -73,6 +73,17 @@ struct SDKConfigurationView: View {
                         }
                     }
                     
+                    Section(header: Text("Integrity Verdict")) {
+                        Toggle("IV Enabled", isOn: $viewModel.sdkConfigData.ivEnabled).disabled(viewModel.mode == .view)
+                        if viewModel.sdkConfigData.ivEnabled {
+                            TextField("IV TEAM ID", text: $viewModel.sdkConfigData.ivTeamId).disabled(viewModel.mode == .view)
+                            Toggle("IV Production", isOn: $viewModel.sdkConfigData.ivProduction).disabled(viewModel.mode == .view)
+                            TextField("IV TIMEOUT", value: $viewModel.sdkConfigData.ivBlockingTimeout, format: .number)
+                                .keyboardType(.numberPad)
+                                .disabled(viewModel.mode == .view)
+                        }
+                    }
+                    
                     Section {
                         switch viewModel.mode {
                         case .setup:
