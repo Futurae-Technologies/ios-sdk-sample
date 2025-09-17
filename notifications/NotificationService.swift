@@ -71,11 +71,24 @@ final class NotificationService: UNNotificationServiceExtension {
     
     func launchSDK(bestAttemptContent: UNMutableNotificationContent, contentHandler: @escaping (UNNotificationContent) -> Void) -> Bool {
         if FuturaeService.client.sdkIsLaunched {
+            if FuturaeService.client.haveBiometricsChanged {
+                bestAttemptContent.body = "Biometrics have changed"
+                contentHandler(bestAttemptContent)
+                return false
+            }
+            
             return true
         }
         
         do {
             try FuturaeService.client.launch(config: sdkConfig)
+            
+            if FuturaeService.client.haveBiometricsChanged {
+                bestAttemptContent.body = "Biometrics have changed"
+                contentHandler(bestAttemptContent)
+                return false
+            }
+            
             return true
         } catch let error {
             bestAttemptContent.body = error.localizedDescription
