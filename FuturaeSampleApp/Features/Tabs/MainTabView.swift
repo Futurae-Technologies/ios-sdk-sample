@@ -26,50 +26,52 @@ struct MainTabView: View {
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            TabView(selection: $selectedTab) {
-                AccountsView()
-                    .tabItem {
-                        VStack {
-                            Image(ImageAsset.account)
-                            Text(String.bottomNavigationAccountsItem)
+            if FuturaeService.client.sdkIsLaunched {
+                TabView(selection: $selectedTab) {
+                    AccountsView()
+                        .tabItem {
+                            VStack {
+                                Image(ImageAsset.account)
+                                Text(String.bottomNavigationAccountsItem)
+                            }
                         }
-                    }
-                    .tag(0)
+                        .tag(0)
 
-                QRScannerView()
-                    .tabItem {
-                        VStack {
-                            Image(ImageAsset.qrScanner)
-                            Text(String.bottomNavigationScanItem)
-                            
+                    QRScannerView()
+                        .tabItem {
+                            VStack {
+                                Image(ImageAsset.qrScanner)
+                                Text(String.bottomNavigationScanItem)
+                                
+                            }
                         }
-                    }
-                    .tag(1)
+                        .tag(1)
 
-                ManualEntryView()
-                    .tabItem {
-                        VStack {
-                            Image(ImageAsset.manualEntry)
-                            Text(String.bottomNavigationManualEntryItem)
+                    ManualEntryView()
+                        .tabItem {
+                            VStack {
+                                Image(ImageAsset.manualEntry)
+                                Text(String.bottomNavigationManualEntryItem)
+                            }
                         }
-                    }
-                    .tag(2)
+                        .tag(2)
 
-                MoreView()
-                    .tabItem {
-                        VStack {
-                            Image(ImageAsset.more)
-                            Text(String.bottomNavigationMoreItem)
+                    MoreView()
+                        .tabItem {
+                            VStack {
+                                Image(ImageAsset.more)
+                                Text(String.bottomNavigationMoreItem)
+                            }
                         }
-                    }
-                    .tag(3)
+                        .tag(3)
+                }
+                
+                FloatingUnlockButton {
+                    NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.unlock(callback: nil))
+                }
+                .padding(.trailing, 20)
+                .padding(.top, 10)
             }
-            
-            FloatingUnlockButton {
-                NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.unlock(callback: nil))
-            }
-            .padding(.trailing, 20)
-            .padding(.top, 10)
         }
         .onReceive(NotificationCenter.default.publisher(for: .qrTabRequested)) { _ in self.selectedTab = 1 }
         .alert(isPresented: Binding<Bool>(
@@ -79,7 +81,14 @@ struct MainTabView: View {
             Alert(
                 title: Text(String.error),
                 message: Text(error?.localizedDescription ?? "Unknown"),
-                dismissButton: .default(Text(String.ok))
+                primaryButton: .default(Text(String.ok)),
+                secondaryButton: .destructive(Text(String.sdkReset)) {
+                    prefs.saveBool(.launchSDK, value: false)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        let config = prefs.sdkConfigData.ftrConfig
+                        FuturaeService.client.reset(appGroup: config.appGroup, keychain: config.keychain, lockConfiguration: config.lockConfiguration)
+                    }
+                }
             )
         }
     }

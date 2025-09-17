@@ -18,6 +18,9 @@ struct SDKConstants {
     static let sdkId = Bundle.main.infoDictionary?["SDK_ID"] as? String ?? ""
     static let sdkKey = Bundle.main.infoDictionary?["SDK_KEY"] as? String ?? ""
     static let sdkURL = "https://" + (Bundle.main.infoDictionary?["SDK_URL"] as? String  ?? "")
+    
+    static let ivTeamId = (Bundle.main.infoDictionary?["IV_TEAM_ID"] as? String  ?? "")
+    static let ivProduction = (Bundle.main.infoDictionary?["IV_PRODUCTION"] as? String  ?? "") == "production"
 }
 
 enum SDKConfigMode {
@@ -46,6 +49,11 @@ struct SDKConfigurationData: Codable {
     
     var keychainAccessibility: KeychainAccessibilityType
     
+    var ivEnabled: Bool
+    var ivTeamId: String
+    var ivProduction: Bool
+    var ivBlockingTimeout: Int
+    
     static var `default` = SDKConfigurationData(
         sdkId: SDKConstants.sdkId,
         sdkKey: SDKConstants.sdkKey,
@@ -58,7 +66,11 @@ struct SDKConfigurationData: Codable {
         invalidatedByBiometricsChange: true,
         allowPinChangeWithBiometricUnlock: true,
         deactivateBiometricsAfterPinChange: true,
-        keychainAccessibility: .afterFirstUnlockThisDeviceOnly
+        keychainAccessibility: .afterFirstUnlockThisDeviceOnly,
+        ivEnabled: !SDKConstants.ivTeamId.isEmpty,
+        ivTeamId: SDKConstants.ivTeamId,
+        ivProduction: SDKConstants.ivProduction,
+        ivBlockingTimeout: 5000
     )
     
     var ftrConfig: FTRConfig {
@@ -87,7 +99,8 @@ struct SDKConfigurationData: Codable {
             keychain: keychainConfig,
             lockConfiguration: lockConfiguration,
             appGroup: data.useAppGroup ? SDKConstants.appGroup : nil,
-            sslPinning: data.sslPinning
+            sslPinning: data.sslPinning,
+            integrityVerdictConfiguration: data.ivEnabled ? .init(teamID: data.ivTeamId, production: data.ivProduction, blockingIVCollectionTimeoutOnAuthMillis: .init(integerLiteral: ivBlockingTimeout)) : nil
         )
     }
 }

@@ -126,6 +126,8 @@ final class AccountsViewModel: ObservableObject {
                 var items: [AccountItem] = []
                 
                 for account in accounts {
+                    let displayName = account.username?.isEmpty == false ? account.username! : account.userId
+                    
                     do {
                         let totpResult = try await FuturaeService.client
                             .getTOTP(.with(userId: account.userId))
@@ -138,7 +140,7 @@ final class AccountsViewModel: ObservableObject {
                             id: account.userId,
                             account: account,
                             serviceName: account.serviceName ?? "Unknown Service",
-                            username: account.username ?? account.userId,
+                            username: displayName,
                             serviceLogo: account.serviceLogo,
                             totp: totpValue,
                             remainingSecs: secsInt
@@ -150,7 +152,7 @@ final class AccountsViewModel: ObservableObject {
                             id: account.userId,
                             account: account,
                             serviceName: account.serviceName ?? "Unknown Service",
-                            username: account.username ?? account.userId,
+                            username: displayName,
                             serviceLogo: account.serviceLogo,
                             totp: "----",
                             remainingSecs: 0

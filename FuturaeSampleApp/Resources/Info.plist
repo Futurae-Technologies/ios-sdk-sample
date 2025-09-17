@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IV_PRODUCTION</key>
+	<string>$(IV_PRODUCTION)</string>
+	<key>IV_TEAM_ID</key>
+	<string>$(IV_TEAM_ID)</string>
 	<key>SDK_URL</key>
 	<string>$(SDK_URL)</string>
 	<key>SDK_KEY</key>
