@@ -12,7 +12,7 @@ final class GlobalPreferences: ObservableObject {
     static let shared = GlobalPreferences()
     
     @Published var sdkConfigData: SDKConfigurationData = .default
-    @Published var launchSDK: Bool = false
+    @Published var launchSDK: Bool = true
     @Published var flowBinding = false
     @Published var verificationCodeType = VerificationCodeType.default
     @Published var sdkPinBiometrics = false
@@ -36,7 +36,7 @@ final class GlobalPreferences: ObservableObject {
         }
         self.sdkConfigData = decoded
         
-        self.launchSDK = loadBool(.launchSDK) ?? false
+        self.launchSDK = sdkConfigData.saveLaunch ? (loadBool(.launchSDK) ?? false) : false
         
         self.collections = loadBool(.collections) ?? false
         self.collectionsAuthentication = loadBool(.collectionsAuthentication) ?? false
@@ -60,10 +60,13 @@ final class GlobalPreferences: ObservableObject {
         }
     }
     
-    func save(sdkConfigData: SDKConfigurationData) {
+    func save(sdkConfigData: SDKConfigurationData, userDefaults: Bool = true) {
         self.sdkConfigData = sdkConfigData
-        if let encoded = try? JSONEncoder().encode(sdkConfigData) {
-            UserDefaults.custom.set(encoded, forKey: UserDefaultsKey.sdkConfig.rawValue)
+        
+        if userDefaults {
+            if let encoded = try? JSONEncoder().encode(sdkConfigData) {
+                UserDefaults.custom.set(encoded, forKey: UserDefaultsKey.sdkConfig.rawValue)
+            }
         }
     }
     
@@ -77,7 +80,7 @@ final class GlobalPreferences: ObservableObject {
         UserDefaults.custom.set(sessionType.rawValue, forKey: UserDefaultsKey.sessionInfoType.rawValue)
     }
     
-    func saveBool(_ key: UserDefaultsKey, value: Bool) {
+    func saveBool(_ key: UserDefaultsKey, value: Bool, userDefaults: Bool = true) {
         switch key {
         case .launchSDK:
             self.launchSDK = value
@@ -101,8 +104,9 @@ final class GlobalPreferences: ObservableObject {
             break
         }
         
-        
-        UserDefaults.custom.set(value, forKey: key.rawValue)
+        if userDefaults {
+            UserDefaults.custom.set(value, forKey: key.rawValue)
+        }
     }
     
     func saveDouble(_ key: UserDefaultsKey, value: Double) {
