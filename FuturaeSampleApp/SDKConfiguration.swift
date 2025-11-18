@@ -54,6 +54,9 @@ struct SDKConfigurationData: Codable {
     var ivProduction: Bool
     var ivBlockingTimeout: Int
     
+    var savePrefs: Bool
+    var saveLaunch: Bool
+    
     static var `default` = SDKConfigurationData(
         sdkId: SDKConstants.sdkId,
         sdkKey: SDKConstants.sdkKey,
@@ -70,7 +73,9 @@ struct SDKConfigurationData: Codable {
         ivEnabled: !SDKConstants.ivTeamId.isEmpty,
         ivTeamId: SDKConstants.ivTeamId,
         ivProduction: SDKConstants.ivProduction,
-        ivBlockingTimeout: 5000
+        ivBlockingTimeout: 5000,
+        savePrefs: true,
+        saveLaunch: true
     )
     
     var ftrConfig: FTRConfig {

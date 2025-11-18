@@ -2,16 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IV_PRODUCTION</key>
-	<string>$(IV_PRODUCTION)</string>
-	<key>IV_TEAM_ID</key>
-	<string>$(IV_TEAM_ID)</string>
-	<key>SDK_URL</key>
-	<string>$(SDK_URL)</string>
-	<key>SDK_KEY</key>
-	<string>$(SDK_KEY)</string>
-	<key>SDK_ID</key>
-	<string>$(SDK_ID)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -32,15 +22,19 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>CFBundleURLName</key>
-			<string>futurae.beta</string>
+			<string>futurae</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>futurae.beta</string>
+				<string>futurae</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>IV_PRODUCTION</key>
+	<string>$(IV_PRODUCTION)</string>
+	<key>IV_TEAM_ID</key>
+	<string>$(IV_TEAM_ID)</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>undecimus</string>
@@ -104,6 +98,12 @@
 	<string>App requires access to your local network for adaptive mechanism.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>App requires access to your location for adaptive mechanism.</string>
+	<key>SDK_ID</key>
+	<string>$(SDK_ID)</string>
+	<key>SDK_KEY</key>
+	<string>$(SDK_KEY)</string>
+	<key>SDK_URL</key>
+	<string>$(SDK_URL)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

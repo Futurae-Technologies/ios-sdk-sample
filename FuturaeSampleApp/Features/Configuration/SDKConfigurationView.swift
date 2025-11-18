@@ -85,6 +85,11 @@ struct SDKConfigurationView: View {
                     }
                     
                     Section {
+                        Toggle("Save configuration in preferences", isOn: $viewModel.sdkConfigData.savePrefs).disabled(viewModel.mode == .view)
+                        Toggle("Launch SDK on app launch", isOn: $viewModel.sdkConfigData.saveLaunch).disabled(viewModel.mode == .view)
+                    }
+                    
+                    Section {
                         switch viewModel.mode {
                         case .setup:
                             Button("Launch SDK") {
