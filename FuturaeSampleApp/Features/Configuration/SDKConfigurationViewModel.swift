@@ -30,8 +30,8 @@ final class SDKConfigurationViewModel: ObservableObject {
         do {
             FuturaeService.client.enableLogging()
             try FuturaeService.client.launch(config: config)
-            prefs.save(sdkConfigData: sdkConfigData)
-            prefs.saveBool(.launchSDK, value: true)
+            prefs.save(sdkConfigData: sdkConfigData, userDefaults: sdkConfigData.savePrefs)
+            prefs.saveBool(.launchSDK, value: true, userDefaults: sdkConfigData.saveLaunch)
         } catch {
             alertMessage = (title: String.error, message: error.localizedDescription)
         }
@@ -45,7 +45,7 @@ final class SDKConfigurationViewModel: ObservableObject {
                 try await FuturaeService.client.updateSDKConfig(appGroup: config.appGroup, keychainConfig: config.keychain).execute()
                 
                 await MainActor.run {
-                    prefs.save(sdkConfigData: sdkConfigData)
+                    prefs.save(sdkConfigData: sdkConfigData, userDefaults: sdkConfigData.savePrefs)
                     self.alertMessage = (title: String.success, message: "Configuration updated")
                 }
             } catch {
@@ -86,7 +86,7 @@ final class SDKConfigurationViewModel: ObservableObject {
                 try await FuturaeService.client.switchToLockConfiguration(parameters).execute()
                 
                 await MainActor.run {
-                    prefs.save(sdkConfigData: sdkConfigData)
+                    prefs.save(sdkConfigData: sdkConfigData, userDefaults: sdkConfigData.savePrefs)
                     self.isLoading = false
                     self.alertMessage = (title: String.success, message: "Lock configuration updated")
                 }

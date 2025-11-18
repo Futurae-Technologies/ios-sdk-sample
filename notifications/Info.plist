@@ -9,5 +9,15 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).NotificationService</string>
 	</dict>
+    <key>IV_PRODUCTION</key>
+    <string>$(IV_PRODUCTION)</string>
+    <key>IV_TEAM_ID</key>
+    <string>$(IV_TEAM_ID)</string>
+    <key>SDK_ID</key>
+    <string>$(SDK_ID)</string>
+    <key>SDK_KEY</key>
+    <string>$(SDK_KEY)</string>
+    <key>SDK_URL</key>
+    <string>$(SDK_URL)</string>
 </dict>
 </plist>
