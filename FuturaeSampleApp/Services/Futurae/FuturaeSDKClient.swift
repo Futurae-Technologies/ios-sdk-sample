@@ -20,6 +20,19 @@ class FuturaeSDKClient: FuturaeSDKClientProtocol {
     
     func launch(config: FTRConfig) throws {
         try FTRClient.launch(config: config)
+        
+        let prefs = GlobalPreferences.shared
+        if prefs.collections {
+            enableAdaptiveCollections(delegate: AdaptiveDelegate())
+        }
+        
+        if prefs.collectionsAuthentication {
+            try? enableAdaptiveSubmissionOnAuthentication()
+        }
+        
+        if prefs.collectionsMigration {
+            try? enableAdaptiveSubmissionOnAccountMigration()
+        }
     }
     
     func enableLogging() {

@@ -16,6 +16,7 @@ enum AdaptivePermission: String, CaseIterable, Identifiable {
     
     case bluetoothPermission = "Bluetooth Permission"
     case locationPermission = "Location Permission"
+    case networkPermission = "Network Permssion"
 }
 
 final class AdaptivePermissionsViewModel: NSObject, ObservableObject, CLLocationManagerDelegate, CBCentralManagerDelegate {
@@ -24,6 +25,7 @@ final class AdaptivePermissionsViewModel: NSObject, ObservableObject, CLLocation
     
     private var locationManager: CLLocationManager?
     private var centralManager: CBCentralManager?
+    private var localAuth: LocalNetworkAuthorization?
     
     override init() {
         super.init()
@@ -41,6 +43,8 @@ final class AdaptivePermissionsViewModel: NSObject, ObservableObject, CLLocation
             locationManager = CLLocationManager()
             locationManager?.delegate = self
             locationManager?.requestWhenInUseAuthorization()
+        case .networkPermission:
+            localNetworkCheck()
         }
     }
     
@@ -109,5 +113,14 @@ final class AdaptivePermissionsViewModel: NSObject, ObservableObject, CLLocation
         let btStatus = CBCentralManager.authorization
         let btAdaptiveStatus: AdaptivePermissionStatus = (btStatus == .allowedAlways) ? .on : (btStatus == .denied ? .off : .unknown)
         statuses[.bluetoothPermission] = btAdaptiveStatus
+        
+        localNetworkCheck()
+    }
+    
+    func localNetworkCheck(){
+        localAuth = LocalNetworkAuthorization()
+        localAuth?.requestAuthorization { [weak self] granted in
+            self?.statuses[.networkPermission] = granted ? .on : .off
+        }
     }
 }
