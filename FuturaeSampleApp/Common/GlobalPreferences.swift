@@ -12,7 +12,7 @@ final class GlobalPreferences: ObservableObject {
     static let shared = GlobalPreferences()
     
     @Published var sdkConfigData: SDKConfigurationData = .default
-    @Published var launchSDK: Bool = true
+    @Published var launchSDK: Bool = false
     @Published var flowBinding = false
     @Published var verificationCodeType = VerificationCodeType.default
     @Published var sdkPinBiometrics = false
