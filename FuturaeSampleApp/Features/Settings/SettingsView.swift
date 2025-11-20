@@ -113,13 +113,17 @@ struct SettingsView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Toggle("Data collections", isOn: $prefs.collections)
                             .onChange(of: prefs.collections) {
-                                FuturaeService.client.enableAdaptiveCollections(delegate: AdaptiveDelegate())
-                                prefs.saveBool(.collections, value: prefs.collections)
-                                
-                                if !prefs.collections {
+                                if prefs.collections {
+                                    FuturaeService.client.enableAdaptiveCollections(delegate: AdaptiveDelegate())
+                                } else {
+                                    FuturaeService.client.disableAdaptiveCollections()
+                                    FuturaeService.client.disableAdaptiveSubmissionOnAuthentication()
+                                    FuturaeService.client.disableAdaptiveSubmissionOnAccountMigration()
                                     prefs.saveBool(.collectionsAuthentication, value: false)
                                     prefs.saveBool(.collectionsMigration, value: false)
                                 }
+                                
+                                prefs.saveBool(.collections, value: prefs.collections)
                             }
                         Text("This enables collecting adaptive observations and sending them to the server.")
                             .font(.footnote)
@@ -131,7 +135,12 @@ struct SettingsView: View {
                         VStack(alignment: .leading, spacing: 4) {
                             Toggle("Authentication", isOn: $prefs.collectionsAuthentication)
                                 .onChange(of: prefs.collectionsAuthentication) {
-                                    try? FuturaeService.client.enableAdaptiveSubmissionOnAuthentication()
+                                    if prefs.collectionsAuthentication {
+                                        try? FuturaeService.client.enableAdaptiveSubmissionOnAuthentication()
+                                    } else {
+                                        FuturaeService.client.disableAdaptiveSubmissionOnAuthentication()
+                                    }
+                                    
                                     prefs.saveBool(.collectionsAuthentication, value: prefs.collectionsAuthentication)
                                 }
                             Text("This enables whether adaptive collections are required during authentication.")
@@ -143,7 +152,12 @@ struct SettingsView: View {
                         VStack(alignment: .leading, spacing: 4) {
                             Toggle("Migration", isOn: $prefs.collectionsMigration)
                                 .onChange(of: prefs.collectionsMigration) {
-                                    try? FuturaeService.client.enableAdaptiveSubmissionOnAccountMigration()
+                                    if prefs.collectionsMigration {
+                                        try? FuturaeService.client.enableAdaptiveSubmissionOnAccountMigration()
+                                    } else {
+                                        FuturaeService.client.disableAdaptiveSubmissionOnAccountMigration()
+                                    }
+                                    
                                     prefs.saveBool(.collectionsMigration, value: prefs.collectionsMigration)
                                 }
                             Text("This enables whether adaptive collections are required during account migration.")
