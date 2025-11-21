@@ -19,7 +19,7 @@ struct SDKUnlockView: View {
     
     var body: some View {
         ZStack(alignment: .center) {
-            VStack(alignment: .center, spacing: 24) {
+            VStack(alignment: .center, spacing: 12) {
                 HStack {
                     Spacer()
                     
@@ -30,11 +30,12 @@ struct SDKUnlockView: View {
                             .foregroundColor(Color.neutralWhite)
                     }
                 }
-                .padding(.all, 20)
+                .padding(.all, 10)
                 
                 Spacer()
                 
                 Image(ImageAsset.futurae)
+                    .frame(maxWidth: 100, maxHeight: 100, alignment: .center)
                 
                 if let errorMessage = viewModel.errorMessage {
                     Text(errorMessage)
@@ -64,8 +65,10 @@ struct SDKUnlockView: View {
                         }
                     )
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 20)
+                    .padding(.vertical, 10)
                 }
+                
+                Spacer()
                 
                 if viewModel.canUseBiometrics {
                     VStack {
@@ -82,13 +85,12 @@ struct SDKUnlockView: View {
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(.white)
                         }
-                        .padding(.top, 24)
                     }
                 }
                 
                 Spacer()
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             
             if viewModel.isLoading {
                 Color.black.opacity(0.4).edgesIgnoringSafeArea(.all)
