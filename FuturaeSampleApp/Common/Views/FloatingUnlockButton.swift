@@ -13,7 +13,6 @@ struct FloatingUnlockButton: View {
     @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State private var sdkState: SDKState? = FuturaeService.client.sdkState
     @State var showFloatingButton = false
-    @State var showUnlockScreen = false
     @State var unlockScreenHandled = true
     
     @StateObject var prefs = GlobalPreferences.shared
@@ -52,17 +51,12 @@ struct FloatingUnlockButton: View {
             
             let hasUnlockMethods = !FuturaeService.client.activeUnlockMethods.filter { $0 != .none }.isEmpty
             if unlockScreenHandled && prefs.unlockScreenWhenLocked && state.lockStatus == .locked && hasUnlockMethods {
-                showUnlockScreen = true
-                unlockScreenHandled = false
+                NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.unlock(callback: {
+                    unlockScreenHandled = false
+                }))
             }
             
             showFloatingButton = prefs.floatingButton && hasUnlockMethods
-        }
-        .fullScreenCover(isPresented: $showUnlockScreen){
-            SDKUnlockView(onUnlocked: {
-                self.showUnlockScreen = false
-                self.unlockScreenHandled = true
-            }, callback: { self.showUnlockScreen = false })
         }
     }
     

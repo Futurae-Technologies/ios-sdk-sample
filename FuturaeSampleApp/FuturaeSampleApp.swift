@@ -16,14 +16,28 @@ struct FuturaeSampleApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if prefs.launchSDK {
-                MainTabView()
-                    .environmentObject(prefs)
-                    .onReceive(NotificationCenter.default.publisher(for: .appRouteChanged)) { self.appRoute = $0.object as? AppRoute }
-                    .fullScreenCover(isPresented: Binding<Bool>(get: { appRoute != nil }, set: { if !$0 { appRoute = nil }})) { viewForRoute(appRoute) }
-                    .onOpenURL { handleURL(url: $0) }
-            } else {
-                SDKConfigurationView(prefs: prefs, mode: .setup)
+            ZStack {
+                if prefs.launchSDK {
+                    MainTabView()
+                        .environmentObject(prefs)
+                } else {
+                    SDKConfigurationView(prefs: prefs, mode: .setup)
+                }
+            }
+            .onOpenURL { handleURL(url: $0) }
+            .fullScreenCover(isPresented: Binding<Bool>(get: { appRoute != nil }, set: { if !$0 { appRoute = nil }})) { viewForRoute(appRoute) }
+            .onReceive(NotificationCenter.default.publisher(for: .appRouteChanged)) {
+                guard let route = $0.object as? AppRoute, !(appRoute?.sameTypeAs(route) ?? false) else { return }
+                
+                if route.requiresUnlock && FuturaeService.client.isLocked {
+                    NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.unlock(callback: {
+                        NotificationCenter.default.post(name: .appRouteChanged, object: route)
+                    }))
+                    
+                    return
+                }
+                
+                self.appRoute = route
             }
         }
     }

@@ -15,6 +15,30 @@ enum AppRoute {
     case unlock(callback: (() -> Void)?)
     case pinInput(title: String, callback: ((String?) -> Void)?)
     case usernamelessSelector(sessionToken: String, redirect: String?)
+    
+    func sameTypeAs(_ route: AppRoute) -> Bool {
+        switch (self, route) {
+        case (.auth, .auth),
+             (.enroll, .enroll),
+             (.migration, .migration),
+             (.unlock, .unlock),
+             (.pinInput, .pinInput),
+             (.usernamelessSelector, .usernamelessSelector):
+            return true
+        default:
+            return false
+        }
+    }
+    
+    var requiresUnlock: Bool {
+        switch self {
+        case .auth:
+            return true
+        default:
+            return false
+        }
+    }
+
 }
 
 enum AuthApprovalType {
