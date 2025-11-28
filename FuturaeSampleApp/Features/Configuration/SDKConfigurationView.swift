@@ -33,8 +33,8 @@ struct SDKConfigurationView: View {
                     
                     if viewModel.mode == .setup || viewModel.mode == .view || viewModel.mode == .updateConfig {
                         Section(header: Text("App & Keychain Groups")) {
-                            Toggle("Use App Group", isOn: $viewModel.sdkConfigData.useAppGroup).disabled(viewModel.mode == .view)
-                            Toggle("Use Keychain Access Group", isOn: $viewModel.sdkConfigData.useKeychainAccessGroup).disabled(viewModel.mode == .view)
+                            Toggle("Use App Group", isOn: $viewModel.sdkConfigData.useAppGroup).disabled(viewModel.mode == .view).accessibilityIdentifier("toggle_use_app_group")
+                            Toggle("Use Keychain Access Group", isOn: $viewModel.sdkConfigData.useKeychainAccessGroup).disabled(viewModel.mode == .view).accessibilityIdentifier("toggle_use_keychain_access_group")
                         }
                         
                         Section(header: Text("Keychain Accessibility")) {
@@ -60,6 +60,7 @@ struct SDKConfigurationView: View {
                                     Text("Unlock Duration: \(Int(viewModel.sdkConfigData.unlockDuration))s")
                                 }.disabled(viewModel.mode == .view)
                                 Toggle("Invalidated by Biometrics Change", isOn: $viewModel.sdkConfigData.invalidatedByBiometricsChange).disabled(viewModel.mode == .view)
+                                    .accessibilityIdentifier("toggle_biometric_invalidation")
                             }
                             
                             if viewModel.sdkConfigData.lockType == .sdkPinWithBiometricsOptional {
@@ -75,6 +76,7 @@ struct SDKConfigurationView: View {
                     
                     Section(header: Text("Integrity Verdict")) {
                         Toggle("IV Enabled", isOn: $viewModel.sdkConfigData.ivEnabled).disabled(viewModel.mode == .view)
+                            .accessibilityIdentifier("toggle_iv_enabled")
                         if viewModel.sdkConfigData.ivEnabled {
                             TextField("IV TEAM ID", text: $viewModel.sdkConfigData.ivTeamId).disabled(viewModel.mode == .view)
                             Toggle("IV Production", isOn: $viewModel.sdkConfigData.ivProduction).disabled(viewModel.mode == .view)
@@ -86,13 +88,15 @@ struct SDKConfigurationView: View {
                     
                     Section {
                         Toggle("Save configuration in preferences", isOn: $viewModel.sdkConfigData.savePrefs).disabled(viewModel.mode == .view)
+                            .accessibilityIdentifier("toggle_save_config_in_prefs")
                         Toggle("Launch SDK on app launch", isOn: $viewModel.sdkConfigData.saveLaunch).disabled(viewModel.mode == .view)
+                            .accessibilityIdentifier("toggle_launch_sdk_on_app_launch")
                     }
                     
                     Section {
                         switch viewModel.mode {
                         case .setup:
-                            Button("Launch SDK") {
+                            Button("Submit") {
                                 viewModel.launchSDK()
                             }
                         case .switchLock:

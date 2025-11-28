@@ -32,6 +32,7 @@ struct ManualEntryView: View {
                         .background(Color.inputBg)
                         .keyboardType(.asciiCapable)
                         .disableAutocorrection(true)
+                        .accessibilityIdentifier("manual_entry_input")
                         .overlay(Rectangle().frame(height: 2).foregroundColor(Color.textDark), alignment: .bottom)
                         .onChange(of: viewModel.shortCode) { viewModel.formatActivationCode($1)}
                         
