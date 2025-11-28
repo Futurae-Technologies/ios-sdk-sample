@@ -17,7 +17,7 @@ struct BannerView: View {
             Image(ImageAsset.restore)
             
             VStack(alignment:. leading) {
-                Text(String.restoreAccounts)
+                Text(String.restoreAccountsAvailable)
                     .font(.header5)
                     .foregroundColor(Color.neutralWhite)
                 

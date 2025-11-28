@@ -20,6 +20,10 @@ struct AccountActivityItem: Identifiable {
         activity.details.result == "allow" ? ImageAsset.success : ImageAsset.error
     }
     
+    var isSuccess : Bool {
+        activity.details.result == "allow"
+    }
+    
     var date: Date {
         Date(timeIntervalSince1970: TimeInterval(activity.timestamp))
     }

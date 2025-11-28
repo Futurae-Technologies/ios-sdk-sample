@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import FuturaeKit
+import OSLog
 
 enum MigrationBanner {
     case success(message: String)
@@ -218,9 +219,7 @@ final class AccountsViewModel: ObservableObject {
                 }
             } catch {
                 await MainActor.run {
-                    self.migrationBanner = .failure(
-                        message: error.localizedDescription
-                    )
+                    Logger().error("Error checking for migratable accounts: \(error.localizedDescription)")
                 }
             }
         }

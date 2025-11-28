@@ -38,6 +38,7 @@ struct AccountsView: View {
                             AccountRowView(item: item, onGenerateHOTP: viewModel.onGenerateHOTP, onDelete: viewModel.onDelete, onLogOut: viewModel.onLogOut, onGenerateTOTP: viewModel.onGenerateTOTP)
                         }
                         .listStyle(PlainListStyle())
+                        .accessibilityIdentifier("accounts_list")
                     }
                 }
                 

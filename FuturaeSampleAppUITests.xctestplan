@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "308542E8-B7F3-4C03-A8CD-F1F9AB6631B1",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:FuturaeSampleApp.xcodeproj",
+        "identifier" : "B76D33552ED5F292001FDCEC",
+        "name" : "FuturaeSampleAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

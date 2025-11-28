@@ -98,6 +98,7 @@ extension String {
     static let settings = "Settings"
     static let configuration = "Configuration"
     static let restoreAccounts = "Restore Accounts"
+    static let restoreAccountsAvailable = "You have active accounts"
     static let deleteAllAccounts = "Delete All Accounts"
     static let deleteAllAccountsConfirmationDialogTitle = "Delete Accounts?"
     static let deleteAllAccountsConfirmationDialogText = "Please note that this action cannot be undone!"

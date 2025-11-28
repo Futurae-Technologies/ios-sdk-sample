@@ -30,6 +30,7 @@ struct AccountHistoryView: View {
                         ActivityRowView(activity: activity)
                     }
                     .listStyle(PlainListStyle())
+                    .accessibilityIdentifier("accounts_history_list")
                 }
             }
             

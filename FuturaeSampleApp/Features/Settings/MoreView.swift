@@ -83,11 +83,11 @@ struct MoreView: View {
                             isDeletingAllAccounts = true
                         } label: {
                             VStack(alignment: .leading, spacing: 8) {
-                                Text(String.sdkReset)
+                                Text(String.deleteAllAccounts)
                                     .foregroundColor(.btnRed)
                                     .font(.header5)
                                 
-                                Text(String.sdkResetSubtitle)
+                                Text(String.deleteAllAccountsSubtitle)
                                     .foregroundColor(.textAlt)
                                     .font(.bodySmall)
                             }
@@ -95,10 +95,11 @@ struct MoreView: View {
                         }
                         .alert("Are you sure you want to reset?", isPresented: $isDeletingAllAccounts) {
                             Button("Delete", role: .destructive) {
-                                prefs.saveBool(.launchSDK, value: false)
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    let config = prefs.sdkConfigData.ftrConfig
-                                    FuturaeService.client.reset(appGroup: config.appGroup, keychain: config.keychain, lockConfiguration: config.lockConfiguration)
+                                Task {
+                                    let accounts = try FuturaeService.client.getAccounts()
+                                    for account in accounts {
+                                        try await FuturaeService.client.logoutAccount(account).execute()
+                                    }
                                 }
                             }
                             Button("Cancel", role: .cancel) {}
