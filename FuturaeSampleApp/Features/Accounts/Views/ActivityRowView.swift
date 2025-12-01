@@ -13,12 +13,9 @@ struct ActivityRowView: View {
     let activity: AccountActivityItem
     
     var body: some View {
-        var image = Image(activity.image)
-        if(activity.isSuccess) {
-            image.accessibilityIdentifier("account_history_success")
-        } else {
-            image.accessibilityIdentifier("account_history_failure")
-        }
+        let image = Image(activity.image)
+            .accessibilityIdentifier(activity.isSuccess ? "account_history_success" : "account_history_failure")
+    
         HStack(spacing: 12) {
             image
             VStack(alignment: .leading, spacing: 4) {
