@@ -18,7 +18,7 @@ struct SettingsView: View {
             HeaderView(title: String.settings, dismissType: .back, titleFont: .header5, paddingBottom: 12)
             List {
                 Section {
-                    NavigationLink("SDK Functions", destination: SDKFunctionsView())
+                    NavigationLink("Debug Utilities", destination: SDKFunctionsView())
                 }
                 
                 if prefs.sdkConfigData.lockType == .sdkPinWithBiometricsOptional {
@@ -82,6 +82,7 @@ struct SettingsView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Toggle("Flow Binding", isOn: $prefs.flowBinding)
                             .onChange(of: prefs.flowBinding) { prefs.saveBool(.flowBinding, value: prefs.flowBinding) }
+                            .accessibilityIdentifier("toggle_flow_binding")
                         Text("This enables flow binding token input during account enrollment and recovery")
                             .font(.footnote)
                             .foregroundColor(.secondary)
@@ -91,14 +92,14 @@ struct SettingsView: View {
                 
                 Section {
                     VStack(alignment: .leading, spacing: 4) {
-                        Picker("Session info method", selection: $prefs.sessionInfoType) {
-                            ForEach(SessionInfoType.allCases, id: \.self) { type in
-                                Text("\(type.description)")
+                        Toggle("Allow fetching session info without unlock",  isOn: Binding(
+                            get: { prefs.sessionInfoType == .unprotected },
+                            set: { newValue in
+                                prefs.sessionInfoType = newValue ? .unprotected : .protected
+                                prefs.save(sessionType: prefs.sessionInfoType)
                             }
-                        }
-                        .onChange(of: prefs.sessionInfoType, { _, newValue in
-                            prefs.save(sessionType: newValue)
-                        })
+                        ))
+                        .accessibilityIdentifier("toggle_session_fetch_unprotected")
                         
                         Text("Determines if the protected or unprotected session method will be used")
                             .font(.footnote)

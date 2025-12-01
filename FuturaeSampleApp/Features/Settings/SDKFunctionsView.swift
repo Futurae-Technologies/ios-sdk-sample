@@ -78,6 +78,14 @@ struct SDKFunctionsView: View {
                         Button("Check Offline Accounts Status") {
                             offlineAccountsStatus()
                         }
+                        Button(String.sdkReset) {
+                            prefs.saveBool(.launchSDK, value: false)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                let config = prefs.sdkConfigData.ftrConfig
+                                FuturaeService.client.reset(appGroup: config.appGroup, keychain: config.keychain, lockConfiguration: config.lockConfiguration)
+                                
+                            }
+                        }
                     }
                     
                 }

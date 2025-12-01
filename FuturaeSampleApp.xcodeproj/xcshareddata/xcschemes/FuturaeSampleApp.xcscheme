@@ -21,14 +21,41 @@
                ReferencedContainer = "container:FuturaeSampleApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B76D33552ED5F292001FDCEC"
+               BuildableName = "FuturaeSampleAppUITests.xctest"
+               BlueprintName = "FuturaeSampleAppUITests"
+               ReferencedContainer = "container:FuturaeSampleApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "DevelopmentRelease"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+                  BuildableIdentifier = "primary"
+                  BlueprintIdentifier = "B76D33552ED5F292001FDCEC"
+                  BuildableName = "FuturaeSampleAppUITests.xctest"
+                  BlueprintName = "FuturaeSampleAppUITests"
+                  ReferencedContainer = "container:FuturaeSampleApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+</Testables>
+
    </TestAction>
    <LaunchAction
       buildConfiguration = "DevelopmentDebug"

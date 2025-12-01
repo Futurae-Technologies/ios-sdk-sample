@@ -58,6 +58,7 @@ struct HeaderView: View {
                             .foregroundColor(Color.neutralWhite)
                             .frame(width: 24, height: 24)
                             .aspectRatio(contentMode: .fit)
+                            .accessibilityIdentifier("header_back_button")
                     }
                     
                     if dismissType == .back {

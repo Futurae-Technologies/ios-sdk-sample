@@ -13,9 +13,11 @@ struct ActivityRowView: View {
     let activity: AccountActivityItem
     
     var body: some View {
+        let image = Image(activity.image)
+            .accessibilityIdentifier(activity.isSuccess ? "account_history_success" : "account_history_failure")
+    
         HStack(spacing: 12) {
-            Image(activity.image)
-            
+            image
             VStack(alignment: .leading, spacing: 4) {
                 Text(activity.title)
                     .font(.header5)
