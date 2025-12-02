@@ -36,7 +36,7 @@ final class FuturaeSampleAppUITestsLaunchTests: XCTestCase {
         app.swipeUp()
         app.swipeUp()
         
-        let launchButton = app.buttons["Launch SDK"]
+        let launchButton = app.buttons["Submit"]
         
         let exists = NSPredicate(format: "exists == true && isHittable == true")
         expectation(for: exists, evaluatedWith: launchButton)
