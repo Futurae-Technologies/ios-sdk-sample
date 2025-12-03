@@ -30,7 +30,20 @@ final class FuturaeSampleAppUITestsLaunchTests: XCTestCase {
         }
         
         app.launch()
-        app.tap()   
+        app.tap()
+        
+        let sdkIdField = app.textFields["text_field_sdk_id"]
+        sdkIdField.tap()
+        sdkIdField.typeText(UUID().uuidString)
+        
+        let sdkKeyField = app.textFields["text_field_sdk_key"]
+        sdkKeyField.tap()
+        sdkKeyField.typeText("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+        
+        let sdkBaseUrlField = app.textFields["text_field_base_url"]
+        sdkBaseUrlField.tap()
+        sdkBaseUrlField.typeText("api.futurae.com")
+        app.keyboards.buttons["Return"].tap()
         
         app.swipeUp()
         app.swipeUp()
@@ -52,7 +65,7 @@ final class FuturaeSampleAppUITestsLaunchTests: XCTestCase {
         XCTAssertTrue(settingsCell.exists)
         settingsCell.tap()
         
-        let sdkFunctions = app.staticTexts["SDK Functions"]
+        let sdkFunctions = app.staticTexts["Debug Utilities"]
         XCTAssertTrue(sdkFunctions.exists)
         sdkFunctions.tap()
         
