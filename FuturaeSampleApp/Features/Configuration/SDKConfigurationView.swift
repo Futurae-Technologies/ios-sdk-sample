@@ -24,9 +24,9 @@ struct SDKConfigurationView: View {
                 Form {
                     if viewModel.mode == .setup || viewModel.mode == .view {
                         Section(header: Text("SDK Credentials")) {
-                            TextField("SDK ID", text: $viewModel.sdkConfigData.sdkId).disabled(viewModel.mode == .view)
-                            TextField("SDK Key", text: $viewModel.sdkConfigData.sdkKey).disabled(viewModel.mode == .view)
-                            TextField("Base URL", text: $viewModel.sdkConfigData.baseUrl).disabled(viewModel.mode == .view)
+                            TextField("SDK ID", text: $viewModel.sdkConfigData.sdkId).disabled(viewModel.mode == .view).accessibilityIdentifier("text_field_sdk_id")
+                            TextField("SDK Key", text: $viewModel.sdkConfigData.sdkKey).disabled(viewModel.mode == .view).accessibilityIdentifier("text_field_sdk_key")
+                            TextField("Base URL", text: $viewModel.sdkConfigData.baseUrl).disabled(viewModel.mode == .view).accessibilityIdentifier("text_field_base_url")
                             Toggle("SSL Pinning", isOn: $viewModel.sdkConfigData.sslPinning).disabled(viewModel.mode == .view)
                         }
                     }
