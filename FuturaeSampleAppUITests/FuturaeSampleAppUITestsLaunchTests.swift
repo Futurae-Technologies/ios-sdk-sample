@@ -55,7 +55,7 @@ final class FuturaeSampleAppUITestsLaunchTests: XCTestCase {
         let sdkBaseUrlField = app.textFields["text_field_base_url"]
         let currentBaseUrl = (sdkBaseUrlField.value as? String) ?? ""
 
-        if currentBaseUrl == "http://" || currentBaseUrl.isEmpty {
+        if currentBaseUrl == "https://" || currentBaseUrl.isEmpty {
             sdkBaseUrlField.tap()
             sdkBaseUrlField.typeText("api.futurae.com")
             app.keyboards.buttons["Return"].tap()
