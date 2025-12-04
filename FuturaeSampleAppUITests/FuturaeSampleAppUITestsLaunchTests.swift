@@ -37,26 +37,30 @@ final class FuturaeSampleAppUITestsLaunchTests: XCTestCase {
 
         print("🟩 Typing SDK ID…")
         let sdkIdField = app.textFields["text_field_sdk_id"]
-        if sdkIdField.value is String {
+        if (sdkIdField.value as? String)?.isEmpty ?? true {
             sdkIdField.tap()
             sdkIdField.typeText(UUID().uuidString)
+            app.keyboards.buttons["Return"].tap()
         }
 
         print("🟩 Typing SDK Key…")
         let sdkKeyField = app.textFields["text_field_sdk_key"]
-        if sdkKeyField.value is String {
+        if (sdkKeyField.value as? String)?.isEmpty ?? true {
             sdkKeyField.tap()
             sdkKeyField.typeText("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+            app.keyboards.buttons["Return"].tap()
         }
 
         print("🟩 Typing Base URL…")
         let sdkBaseUrlField = app.textFields["text_field_base_url"]
-        if sdkBaseUrlField.value is String {
+        let currentBaseUrl = (sdkBaseUrlField.value as? String) ?? ""
+
+        if currentBaseUrl == "http://" || currentBaseUrl.isEmpty {
             sdkBaseUrlField.tap()
             sdkBaseUrlField.typeText("api.futurae.com")
+            app.keyboards.buttons["Return"].tap()
         }
-    
-        app.keyboards.buttons["Return"].tap()
+
 
         print("🟩 Scrolling…")
         app.swipeUp()
