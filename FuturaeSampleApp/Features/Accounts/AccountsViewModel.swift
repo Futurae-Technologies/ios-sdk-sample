@@ -198,6 +198,19 @@ final class AccountsViewModel: ObservableObject {
             } catch { print(error)}
         }
     }
+
+    func loadAccountsPendingSessions() {
+        Task {
+            do{
+                let accounts = try FuturaeService.client.getAccounts()
+                let pendingSessions = try await FuturaeService.client.getPendingSessions(accounts).execute()
+                // TODO handle pending sessions if necessary
+                
+            } catch {
+                Logger().error("Error loading pending sessions: \(error.localizedDescription)")
+            }
+        }
+    }
     
     func checkForMigratableAccounts() {
         guard !didCheckMigration else { return }
