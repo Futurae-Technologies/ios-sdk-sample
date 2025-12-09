@@ -56,6 +56,7 @@ public protocol FuturaeSDKClientProtocol {
     func logoutAccount(_ account: FTRAccount) -> AsyncTask
     func deleteAccount(_ account: FTRAccount) throws
     func getAccountsStatus(_ accounts: [FTRAccount]) -> AsyncTaskResult<FTRAccountsStatus>
+    func getPendingSessions(_ accounts: [FTRAccount]) -> AsyncTaskResult<FTRPendingSessions>
     func getAccountHistory(_ account: FTRAccount) -> AsyncTaskResult<FTRAccountHistory>
     func activateBiometrics() throws
     func deactivateBiometrics() throws

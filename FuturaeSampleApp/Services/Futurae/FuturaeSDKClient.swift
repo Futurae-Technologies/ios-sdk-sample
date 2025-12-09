@@ -8,6 +8,7 @@
 import FuturaeKit
 
 class FuturaeSDKClient: FuturaeSDKClientProtocol {
+    
     var client: FTRClient { FTRClient.shared }
     
     var sdkIsLaunched: Bool {
@@ -182,6 +183,10 @@ class FuturaeSDKClient: FuturaeSDKClientProtocol {
     
     func getAccountsStatus(_ accounts: [FTRAccount]) -> AsyncTaskResult<FTRAccountsStatus> {
         client.getAccountsStatus(accounts)
+    }
+    
+    func getPendingSessions(_ accounts: [FuturaeKit.FTRAccount]) -> FuturaeKit.AsyncTaskResult<FuturaeKit.FTRPendingSessions> {
+        client.getPendingSessions(accounts)
     }
     
     func getAccountHistory(_ account: FTRAccount) -> AsyncTaskResult<FTRAccountHistory> {
