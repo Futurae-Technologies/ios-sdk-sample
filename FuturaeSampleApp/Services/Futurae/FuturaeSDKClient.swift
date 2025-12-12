@@ -280,4 +280,12 @@ class FuturaeSDKClient: FuturaeSDKClientProtocol {
     func replyAuth(_ parameters: AuthReplyParameters) -> AsyncTask {
         client.replyAuth(parameters)
     }
+    
+    func exchangeTokenForSessionToken(_ exchangeToken: String) -> AsyncTaskResult<String> {
+        client.exchangeTokenForSessionToken(exchangeToken)
+    }
+    
+    func exchangeTokenForEnrollmentActivationCode(_ exchangeToken: String) -> AsyncTaskResult<String> {
+        client.exchangeTokenForEnrollmentActivationCode(exchangeToken)
+    }
 }

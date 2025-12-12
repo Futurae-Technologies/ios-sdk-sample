@@ -80,4 +80,6 @@ public protocol FuturaeSDKClientProtocol {
     func setAdaptiveTimeThreshold(_ threshold: Int) throws
     func enroll(parameters: EnrollParameters) -> AsyncTask
     func replyAuth(_ parameters: AuthReplyParameters) -> AsyncTask
+    func exchangeTokenForEnrollmentActivationCode(_ exchangeToken: String) -> AsyncTaskResult<String>
+    func exchangeTokenForSessionToken(_ exchangeToken: String) -> AsyncTaskResult<String>
 }

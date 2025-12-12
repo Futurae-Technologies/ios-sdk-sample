@@ -56,12 +56,38 @@ struct FuturaeSampleApp: App {
             if let activation = FTRUtils.activationDataFromURL(url) {
                 NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.enroll(type: .activationCode(code: activation.activationCode)))
             }
+        case .activationExchangeToken:
+            if let activation = FTRUtils.activationTokenExchangeDataFromURL(url) {
+                Task {
+                    do {
+                        let activationCode = try await FuturaeService.client.exchangeTokenForEnrollmentActivationCode(activation.exchangeToken).execute()
+                        NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.enroll(type: .activationCode(code: activationCode)))
+                    } catch {
+                        print(error)
+                    }
+                }
+            }
         case .authentication:
             if let authentication = FTRUtils.authenticationDataFromURL(url) {
                 NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.auth(type: .url(sessionToken: authentication.sessionToken,
                                                                                                          userId: authentication.userId,
                                                                                                          redirect: authentication.mobileAuthRedirectUri
                                                                                                         )))
+            }
+            
+        case .authenticationExchangeToken:
+            if let authentication = FTRUtils.authTokenExchangeDataFromURL(url) {
+                Task {
+                    do {
+                        let sessionToken = try await FuturaeService.client.exchangeTokenForSessionToken(authentication.exchangeToken).execute()
+                        NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.auth(type: .url(sessionToken: sessionToken,
+                                                                                                                 userId: authentication.userId,
+                                                                                                                 redirect: nil
+                                                                                                                )))
+                    } catch {
+                        print(error)
+                    }
+                }
             }
         case .usernamelessAuth:
             if let data = FTRUtils.usernamelessAuthDataFromURL(url) {

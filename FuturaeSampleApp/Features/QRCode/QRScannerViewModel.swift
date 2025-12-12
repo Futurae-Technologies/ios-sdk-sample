@@ -96,6 +96,31 @@ final class QRScannerViewModel: NSObject, ObservableObject {
         switch type {
         case .enrollment:
             NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.enroll(type: .activationCode(code: code)))
+        case .activationTokenExchange:
+            if let activation = FTRUtils.activationTokenExchangeFromQR(code) {
+                Task {
+                    do {
+                        let activationCode = try await FuturaeService.client.exchangeTokenForEnrollmentActivationCode(activation.exchangeToken).execute()
+                        NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.enroll(type: .activationCode(code: activationCode)))
+                    } catch {
+                        print(error)
+                    }
+                }
+            }
+        case .authTokenExchange:
+            if let authentication = FTRUtils.authTokenExchangeFromQR(code) {
+                Task {
+                    do {
+                        let sessionToken = try await FuturaeService.client.exchangeTokenForSessionToken(authentication.exchangeToken).execute()
+                        NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.auth(type: .url(sessionToken: sessionToken,
+                                                                                                                 userId: authentication.userId,
+                                                                                                                 redirect: nil
+                                                                                                                )))
+                    } catch {
+                        print(error)
+                    }
+                }
+            }
         case .onlineAuth:
             NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.auth(type: .onlineQR(qrCode: code)))
         case .offlineAuth:
