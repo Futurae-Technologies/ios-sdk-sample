@@ -103,7 +103,7 @@ final class QRScannerViewModel: NSObject, ObservableObject {
                         let activationCode = try await FuturaeService.client.exchangeTokenForEnrollmentActivationCode(activation.exchangeToken).execute()
                         NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.enroll(type: .activationCode(code: activationCode)))
                     } catch {
-                        print(error)
+                        self.showAlertMessage("Failed to retrieve activation code: \(error.localizedDescription)")
                     }
                 }
             }
@@ -117,7 +117,7 @@ final class QRScannerViewModel: NSObject, ObservableObject {
                                                                                                                  redirect: nil
                                                                                                                 )))
                     } catch {
-                        print(error)
+                        self.showAlertMessage("Failed to retrieve session token: \(error.localizedDescription)")
                     }
                 }
             }
@@ -133,9 +133,7 @@ final class QRScannerViewModel: NSObject, ObservableObject {
             case .sdkPin:
                 NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.pinInput(title: "Use PIN", callback: { pin in
                     guard let pin = pin else {
-                        DispatchQueue.main.async {
-                            self.alertMessage = "PIN code is required."
-                        }
+                        self.showAlertMessage("PIN code is required.")
                         return
                     }
                     
@@ -147,14 +145,17 @@ final class QRScannerViewModel: NSObject, ObservableObject {
             NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.auth(type: .offlineQR(parameters: parameters)))
             
         case .invalid:
-            DispatchQueue.main.async {
-                self.alertMessage = "Invalid QR code.\n(Code: \(code))"
-            }
-            
+            showAlertMessage("Invalid QR code.\n(Code: \(code))")
         default:
             DispatchQueue.main.async {
                 self.usernamelessQRCode = code
             }
+        }
+    }
+    
+    func showAlertMessage(_ string: String){
+        DispatchQueue.main.async {
+            self.alertMessage = string
         }
     }
 }

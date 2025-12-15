@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0709EB812EF03DD600F9DFFB /* AdaptiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D800362E7AE90500FE8459 /* AdaptiveKit.framework */; };
+		0709EB822EF03DD600F9DFFB /* AdaptiveKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D800362E7AE90500FE8459 /* AdaptiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0709EB832EF03DD600F9DFFB /* FuturaeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D800372E7AE90500FE8459 /* FuturaeKit.framework */; };
+		0709EB842EF03DD600F9DFFB /* FuturaeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D800372E7AE90500FE8459 /* FuturaeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		071D4CD32ECF0B6800F15B8E /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D4CD22ECF0B6800F15B8E /* LocalNetworkAuthorization.swift */; };
 		071D4CD42ECF104F00F15B8E /* AdaptiveDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754E022DDFD39700280654 /* AdaptiveDelegate.swift */; };
 		071D4CD52ECF105C00F15B8E /* AdaptiveDebugStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF42DDFD39700280654 /* AdaptiveDebugStorage.swift */; };
@@ -103,6 +107,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0709EB852EF03DD600F9DFFB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0709EB842EF03DD600F9DFFB /* FuturaeKit.framework in Embed Frameworks */,
+				0709EB822EF03DD600F9DFFB /* AdaptiveKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0736C44F2D87ABDB00932FC7 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +252,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0709EB832EF03DD600F9DFFB /* FuturaeKit.framework in Frameworks */,
+				0709EB812EF03DD600F9DFFB /* AdaptiveKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +581,7 @@
 				07135A172D6F35EE004C84A1 /* Sources */,
 				07135A192D6F35EE004C84A1 /* Resources */,
 				0736C44F2D87ABDB00932FC7 /* Embed Foundation Extensions */,
+				0709EB852EF03DD600F9DFFB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
