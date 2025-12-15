@@ -11,7 +11,10 @@ import FuturaeKit
 @main
 struct FuturaeSampleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     @State var appRoute: AppRoute? = nil
+    @State var alertMessage: String? = nil
+    
     @StateObject var prefs = GlobalPreferences.shared
     
     var body: some Scene {
@@ -39,6 +42,16 @@ struct FuturaeSampleApp: App {
                 
                 self.appRoute = route
             }
+            .alert(isPresented: Binding<Bool>(
+                get: { alertMessage != nil },
+                set: { if !$0 { alertMessage = nil } }
+            )) {
+                Alert(
+                    title: Text("Error"),
+                    message: Text(alertMessage ?? "Unknown"),
+                    dismissButton: .default(Text(String.ok))
+                )
+            }
         }
     }
     
@@ -57,13 +70,13 @@ struct FuturaeSampleApp: App {
                 NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.enroll(type: .activationCode(code: activation.activationCode)))
             }
         case .activationExchangeToken:
-            if let activation = FTRUtils.activationTokenExchangeDataFromURL(url) {
+            if let activation = FTRUtils.activationTokenExchangeFromURL(url) {
                 Task {
                     do {
                         let activationCode = try await FuturaeService.client.exchangeTokenForEnrollmentActivationCode(activation.exchangeToken).execute()
                         NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.enroll(type: .activationCode(code: activationCode)))
                     } catch {
-                        print(error)
+                        self.showAlertMessage("Failed to retrieve activation code: \(error.localizedDescription)")
                     }
                 }
             }
@@ -76,7 +89,7 @@ struct FuturaeSampleApp: App {
             }
             
         case .authenticationExchangeToken:
-            if let authentication = FTRUtils.authTokenExchangeDataFromURL(url) {
+            if let authentication = FTRUtils.authTokenExchangeFromURL(url) {
                 Task {
                     do {
                         let sessionToken = try await FuturaeService.client.exchangeTokenForSessionToken(authentication.exchangeToken).execute()
@@ -85,7 +98,7 @@ struct FuturaeSampleApp: App {
                                                                                                                  redirect: nil
                                                                                                                 )))
                     } catch {
-                        print(error)
+                        self.showAlertMessage("Failed to retrieve session token: \(error.localizedDescription)")
                     }
                 }
             }
@@ -126,6 +139,12 @@ struct FuturaeSampleApp: App {
             default:
                 Text("Unknown route")
             }
+        }
+    }
+    
+    func showAlertMessage(_ string: String){
+        DispatchQueue.main.async {
+            self.alertMessage = string
         }
     }
 }
