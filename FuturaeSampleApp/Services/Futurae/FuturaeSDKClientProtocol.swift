@@ -40,7 +40,6 @@ public protocol FuturaeSDKClientProtocol {
     // MARK: - Core SDK functions
     func sdkStateReport() throws -> SDKReport
     func setUserPresenceDelegate(_ delegate: FTRUserPresenceDelegate?)
-    func decryptExtraInfo(_ encryptedExtraInfo: String, userId: String) throws -> [FTRExtraInfo]
     func getSessionInfo(_ parameters: SessionParameters) -> AsyncTaskResult<FTRSession>
     func getSessionInfoWithoutUnlock(_ parameters: SessionParameters) -> AsyncTaskResult<FTRSession>
     func openURL(_ url: URL, options: [UIApplication.OpenURLOptionsKey: Any], delegate: FTROpenURLDelegate?)

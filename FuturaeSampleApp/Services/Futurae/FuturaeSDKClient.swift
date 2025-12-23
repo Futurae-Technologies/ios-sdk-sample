@@ -119,10 +119,6 @@ class FuturaeSDKClient: FuturaeSDKClientProtocol {
         client.setUserPresenceDelegate(delegate)
     }
     
-    func decryptExtraInfo(_ encryptedExtraInfo: String, userId: String) throws -> [FTRExtraInfo] {
-        try client.decryptExtraInfo(encryptedExtraInfo, userId: userId)
-    }
-    
     func getSessionInfo(_ parameters: SessionParameters) -> AsyncTaskResult<FTRSession> {
         client.getSessionInfo(parameters)
     }

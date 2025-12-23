@@ -28,23 +28,6 @@ final class NotificationService: UNNotificationServiceExtension {
             return
         }
         
-        if let encrypted = bestAttemptContent.userInfo[EXTRA_INFO_ENC_KEY] as? String,
-           let userId = bestAttemptContent.userInfo[USER_ID_KEY] as? String {
-            if !launchSDK(bestAttemptContent: bestAttemptContent, contentHandler: contentHandler){
-                return
-            }
-            
-            if let decrypted = try? FuturaeService.client.decryptExtraInfo(encrypted, userId: userId) {
-                bestAttemptContent.body =  decrypted.compactMap {
-                    "\($0.key): \($0.value)"
-                }.joined(separator: ", ")
-            }
-            
-            bestAttemptContent.categoryIdentifier = NOTIFICATION_AUTH_CATEGORY
-            contentHandler(bestAttemptContent)
-            return
-        }
-        
         if let notificationId = request.content.userInfo[NOTIFICATION_ID_KEY] as? String {
             if !launchSDK(bestAttemptContent: bestAttemptContent, contentHandler: contentHandler){
                 return
