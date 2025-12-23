@@ -78,6 +78,10 @@ struct SDKFunctionsView: View {
                         Button("Check Offline Accounts Status") {
                             offlineAccountsStatus()
                         }
+                        
+                        Button("Synchronous Auth Token") {
+                            synchronousAuthToken()
+                        }
                         Button(String.sdkReset) {
                             prefs.saveBool(.launchSDK, value: false)
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -112,6 +116,21 @@ struct SDKFunctionsView: View {
                 message: Text(alertMessage?.message ?? ""),
                 dismissButton: .default(Text(String.ok))
             )
+        }
+    }
+    
+    func synchronousAuthToken(){
+        guard let userId = (try? FuturaeService.client.getAccounts())?.first?.userId else {
+            self.alertMessage = ("Token", "No accounts found")
+            return
+        }
+        
+        do {
+            let token = try FuturaeService.client.getSynchronousAuthToken(userId: userId)
+            UIPasteboard.general.string = token
+            self.alertMessage = ("Token", token)
+        } catch {
+            self.alertMessage = ("Token error", error.localizedDescription)
         }
     }
     
