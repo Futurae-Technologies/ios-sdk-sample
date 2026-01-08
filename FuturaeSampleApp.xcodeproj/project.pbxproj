@@ -12,12 +12,6 @@
 		071D4CD52ECF105C00F15B8E /* AdaptiveDebugStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF42DDFD39700280654 /* AdaptiveDebugStorage.swift */; };
 		071D4CD62ECF106400F15B8E /* FileEncryptUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF52DDFD39700280654 /* FileEncryptUtility.swift */; };
 		071D4CD72ECF106B00F15B8E /* FileStorageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DF62DDFD39700280654 /* FileStorageUtility.swift */; };
-		074298552EF290E800180320 /* AdaptiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D800362E7AE90500FE8459 /* AdaptiveKit.framework */; };
-		074298562EF290E800180320 /* AdaptiveKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D800362E7AE90500FE8459 /* AdaptiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		074298572EF290E800180320 /* FuturaeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D800372E7AE90500FE8459 /* FuturaeKit.framework */; };
-		074298582EF290E800180320 /* FuturaeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D800372E7AE90500FE8459 /* FuturaeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0742985A2EF290F200180320 /* AdaptiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D800362E7AE90500FE8459 /* AdaptiveKit.framework */; };
-		0742985C2EF290F200180320 /* FuturaeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D800372E7AE90500FE8459 /* FuturaeKit.framework */; };
 		075A24672DE45A8700C8D0F2 /* SDKConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A24662DE45A8700C8D0F2 /* SDKConfiguration.swift */; };
 		075A24682DE45A8700C8D0F2 /* SDKConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A24662DE45A8700C8D0F2 /* SDKConfiguration.swift */; };
 		07754E0F2DDFD39700280654 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754E0D2DDFD39700280654 /* MainTabView.swift */; };
@@ -87,6 +81,10 @@
 		07754E6F2DDFD91800280654 /* FuturaeSDKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07754DE82DDFD39700280654 /* FuturaeSDKClient.swift */; };
 		0778CBFF2E571DAB0041ACEC /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0778CBFE2E571DAB0041ACEC /* Config.xcconfig */; };
 		0778CC002E571DAB0041ACEC /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0778CBFE2E571DAB0041ACEC /* Config.xcconfig */; };
+		0785233D2F0FD2F8007C558F /* FuturaeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0785233C2F0FD2F8007C558F /* FuturaeKit */; };
+		078523402F0FD30A007C558F /* AdaptiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0785233F2F0FD30A007C558F /* AdaptiveKit */; };
+		078523422F0FD316007C558F /* FuturaeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 078523412F0FD316007C558F /* FuturaeKit */; };
+		078523442F0FD316007C558F /* AdaptiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = 078523432F0FD316007C558F /* AdaptiveKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,18 +114,6 @@
 				07754E622DDFD87500280654 /* notifications.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		074298592EF290E800180320 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				074298582EF290E800180320 /* FuturaeKit.framework in Embed Frameworks */,
-				074298562EF290E800180320 /* AdaptiveKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -249,8 +235,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				074298572EF290E800180320 /* FuturaeKit.framework in Frameworks */,
-				074298552EF290E800180320 /* AdaptiveKit.framework in Frameworks */,
+				0785233D2F0FD2F8007C558F /* FuturaeKit in Frameworks */,
+				078523402F0FD30A007C558F /* AdaptiveKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +244,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0742985C2EF290F200180320 /* FuturaeKit.framework in Frameworks */,
-				0742985A2EF290F200180320 /* AdaptiveKit.framework in Frameworks */,
+				078523422F0FD316007C558F /* FuturaeKit in Frameworks */,
+				078523442F0FD316007C558F /* AdaptiveKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +561,6 @@
 				07135A172D6F35EE004C84A1 /* Sources */,
 				07135A192D6F35EE004C84A1 /* Resources */,
 				0736C44F2D87ABDB00932FC7 /* Embed Foundation Extensions */,
-				074298592EF290E800180320 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -584,6 +569,8 @@
 			);
 			name = FuturaeSampleApp;
 			packageProductDependencies = (
+				0785233C2F0FD2F8007C558F /* FuturaeKit */,
+				0785233F2F0FD30A007C558F /* AdaptiveKit */,
 			);
 			productName = FuturaeDemoApp;
 			productReference = 07135A1B2D6F35EE004C84A1 /* FuturaeSampleApp.app */;
@@ -606,6 +593,8 @@
 			);
 			name = notifications;
 			packageProductDependencies = (
+				078523412F0FD316007C558F /* FuturaeKit */,
+				078523432F0FD316007C558F /* AdaptiveKit */,
 			);
 			productName = notifications;
 			productReference = 07754E5B2DDFD87500280654 /* notifications.appex */;
@@ -666,6 +655,8 @@
 			mainGroup = 07135A122D6F35EE004C84A1;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				0785233B2F0FD2F8007C558F /* XCRemoteSwiftPackageReference "ios-sdk-beta" */,
+				0785233E2F0FD30A007C558F /* XCRemoteSwiftPackageReference "ios-adaptive-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 07135A1C2D6F35EE004C84A1 /* Products */;
@@ -2416,6 +2407,48 @@
 			defaultConfigurationName = DevelopmentRelease;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0785233B2F0FD2F8007C558F /* XCRemoteSwiftPackageReference "ios-sdk-beta" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Futurae-Technologies/ios-sdk-beta";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.9.0;
+			};
+		};
+		0785233E2F0FD30A007C558F /* XCRemoteSwiftPackageReference "ios-adaptive-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Futurae-Technologies/ios-adaptive-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0785233C2F0FD2F8007C558F /* FuturaeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0785233B2F0FD2F8007C558F /* XCRemoteSwiftPackageReference "ios-sdk-beta" */;
+			productName = FuturaeKit;
+		};
+		0785233F2F0FD30A007C558F /* AdaptiveKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0785233E2F0FD30A007C558F /* XCRemoteSwiftPackageReference "ios-adaptive-sdk" */;
+			productName = AdaptiveKit;
+		};
+		078523412F0FD316007C558F /* FuturaeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0785233B2F0FD2F8007C558F /* XCRemoteSwiftPackageReference "ios-sdk-beta" */;
+			productName = FuturaeKit;
+		};
+		078523432F0FD316007C558F /* AdaptiveKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0785233E2F0FD30A007C558F /* XCRemoteSwiftPackageReference "ios-adaptive-sdk" */;
+			productName = AdaptiveKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07135A132D6F35EE004C84A1 /* Project object */;
 }
