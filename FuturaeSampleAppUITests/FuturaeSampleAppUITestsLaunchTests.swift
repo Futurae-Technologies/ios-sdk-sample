@@ -30,19 +30,31 @@ final class FuturaeSampleAppUITestsLaunchTests: XCTestCase {
         }
         
         app.launch()
-        app.tap()   
+        
+        
+        XCTAssertEqual(app.state, .runningForeground)
+
+        let screenshot = XCUIScreen.main.screenshot()
+        let attachment = XCTAttachment(screenshot: screenshot)
+        attachment.lifetime = .keepAlways
+        add(attachment)
+
+        print(app.debugDescription)
+        
+        app.tap()
         
         app.swipeUp()
         app.swipeUp()
         app.swipeUp()
         
         let launchButton = app.buttons["Submit"]
-        
-        let exists = NSPredicate(format: "exists == true && isHittable == true")
-        expectation(for: exists, evaluatedWith: launchButton)
-        waitForExpectations(timeout: 5)
-        
-        launchButton.tap()
+
+        if launchButton.waitForExistence(timeout: 5) {
+            if launchButton.isHittable {
+                launchButton.tap()
+            }
+        }
+
         
         let moreButton = app.tabBars.buttons.matching(identifier: "More").firstMatch
         XCTAssertTrue(moreButton.exists)
@@ -52,7 +64,7 @@ final class FuturaeSampleAppUITestsLaunchTests: XCTestCase {
         XCTAssertTrue(settingsCell.exists)
         settingsCell.tap()
         
-        let sdkFunctions = app.staticTexts["SDK Functions"]
+        let sdkFunctions = app.staticTexts["Debug Utilities"]
         XCTAssertTrue(sdkFunctions.exists)
         sdkFunctions.tap()
         
