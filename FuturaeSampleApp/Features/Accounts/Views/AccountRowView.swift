@@ -18,6 +18,7 @@ struct AccountRowView: View {
     let onDelete: (FTRAccount) -> Void
     let onLogOut: (FTRAccount) -> Void
     let onGenerateTOTP: (FTRAccount, TOTPParameters) -> Void
+    let showSensitiveContent : Bool
     
     var lockedOut: Bool { item.account.lockedOut }
     
@@ -79,7 +80,7 @@ struct AccountRowView: View {
                     Image(ImageAsset.alert)
                 }
             } else {
-                Text(item.totp.spaced())
+                Text(showSensitiveContent ? item.totp.spaced() : "••••••")
                     .font(.titleH2)
                     .foregroundColor(Color.textDark)
             }
