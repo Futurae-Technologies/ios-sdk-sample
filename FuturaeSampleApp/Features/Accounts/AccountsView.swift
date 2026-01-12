@@ -11,6 +11,8 @@ import FuturaeKit
 
 struct AccountsView: View {
     @StateObject private var viewModel = AccountsViewModel()
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var showOTP = false
     
     var body: some View {
         NavigationStack {
@@ -35,7 +37,14 @@ struct AccountsView: View {
                         EmptyInfoView(image: .accounts, title: String.accountsListIsEmpty, subtitle: String.accountsListIsEmptyDescription)
                     } else {
                         List(viewModel.accountItems) { item in
-                            AccountRowView(item: item, onGenerateHOTP: viewModel.onGenerateHOTP, onDelete: viewModel.onDelete, onLogOut: viewModel.onLogOut, onGenerateTOTP: viewModel.onGenerateTOTP)
+                            AccountRowView(
+                                item: item,
+                                onGenerateHOTP: viewModel.onGenerateHOTP,
+                                onDelete: viewModel.onDelete,
+                                onLogOut: viewModel.onLogOut,
+                                onGenerateTOTP: viewModel.onGenerateTOTP,
+                                showSensitiveContent: showOTP
+                            )
                         }
                         .listStyle(PlainListStyle())
                         .accessibilityIdentifier("accounts_list")
@@ -55,8 +64,6 @@ struct AccountsView: View {
             .onReceive(NotificationCenter.default.publisher(for: .accountsChanged)) { _ in viewModel.loadAccounts() }
             .onAppear {
                 viewModel.loadAccounts()
-                viewModel.loadAccountsStatus()
-                viewModel.loadAccountsPendingSessions()
             }
             .alert(isPresented: Binding<Bool>(
                 get: { viewModel.alertMessage != nil },
@@ -69,9 +76,19 @@ struct AccountsView: View {
                 )
             }
         }
-        
+        .onChange(of: scenePhase) { _, newPhase in
+            switch newPhase {
+            case .active:
+                showOTP = true
+            case .background, .inactive:
+                showOTP = false
+            @unknown default:
+                break
+            }
+        }
     }
 }
+
 
 struct AccountsView_Previews: PreviewProvider {
     static var previews: some View {
