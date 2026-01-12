@@ -64,6 +64,8 @@ struct AccountsView: View {
             .onReceive(NotificationCenter.default.publisher(for: .accountsChanged)) { _ in viewModel.loadAccounts() }
             .onAppear {
                 viewModel.loadAccounts()
+                viewModel.loadAccountsStatus()
+                viewModel.loadAccountsPendingSessions()
             }
             .alert(isPresented: Binding<Bool>(
                 get: { viewModel.alertMessage != nil },
