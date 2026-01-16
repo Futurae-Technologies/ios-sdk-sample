@@ -85,7 +85,6 @@
 		07A346042EF15D8B00B1A933 /* AdaptiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07A346032EF15D8B00B1A933 /* AdaptiveKit */; };
 		07A346062EF15D9A00B1A933 /* FuturaeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07A346052EF15D9A00B1A933 /* FuturaeKit */; };
 		07A346082EF15D9A00B1A933 /* AdaptiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07A346072EF15D9A00B1A933 /* AdaptiveKit */; };
-		B7D6C05A2F151B5900B166F4 /* PrivacyProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6C0592F151B5200B166F4 /* PrivacyProtection.swift */; };
 		B7D6C05B2F151B5900B166F4 /* PrivacyProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6C0592F151B5200B166F4 /* PrivacyProtection.swift */; };
 /* End PBXBuildFile section */
 
@@ -782,7 +781,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				071D4CD72ECF106B00F15B8E /* FileStorageUtility.swift in Sources */,
-				B7D6C05A2F151B5900B166F4 /* PrivacyProtection.swift in Sources */,
 				071D4CD62ECF106400F15B8E /* FileEncryptUtility.swift in Sources */,
 				075A24672DE45A8700C8D0F2 /* SDKConfiguration.swift in Sources */,
 				07754E6C2DDFD90C00280654 /* GlobalPreferences.swift in Sources */,
