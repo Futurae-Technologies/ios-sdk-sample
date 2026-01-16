@@ -12,6 +12,8 @@ import FuturaeKit
 struct FuturaeSampleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
+    @Environment(\.scenePhase) private var scenePhase
+    
     @State var appRoute: AppRoute? = nil
     @State var alertMessage: String? = nil
     
@@ -25,6 +27,16 @@ struct FuturaeSampleApp: App {
                         .environmentObject(prefs)
                 } else {
                     SDKConfigurationView(prefs: prefs, mode: .setup)
+                }
+            }
+            .onChange(of: scenePhase) { oldPhase, newPhase in
+                switch newPhase {
+                case .inactive, .background:
+                    PrivacyProtection.shared.enable()
+                case .active:
+                    PrivacyProtection.shared.disable()
+                @unknown default:
+                    break
                 }
             }
             .onOpenURL { handleURL(url: $0) }

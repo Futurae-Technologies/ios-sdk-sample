@@ -85,6 +85,7 @@
 		07A346042EF15D8B00B1A933 /* AdaptiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07A346032EF15D8B00B1A933 /* AdaptiveKit */; };
 		07A346062EF15D9A00B1A933 /* FuturaeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07A346052EF15D9A00B1A933 /* FuturaeKit */; };
 		07A346082EF15D9A00B1A933 /* AdaptiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07A346072EF15D9A00B1A933 /* AdaptiveKit */; };
+		B7D6C05B2F151B5900B166F4 /* PrivacyProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6C0592F151B5200B166F4 /* PrivacyProtection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,7 @@
 		07D8003D2E7AE90900FE8459 /* FuturaeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FuturaeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76D33562ED5F292001FDCEC /* FuturaeSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuturaeSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76D336E2ED71F3F001FDCEC /* FuturaeSampleAppUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FuturaeSampleAppUITests.xctestplan; sourceTree = "<group>"; };
+		B7D6C0592F151B5200B166F4 /* PrivacyProtection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyProtection.swift; sourceTree = "<group>"; };
 		B7E2BF692EE70B9400A593D7 /* AdaptiveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AdaptiveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E2BF6D2EE70B9700A593D7 /* FuturaeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FuturaeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E2BF702EE70BA100A593D7 /* FuturaeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FuturaeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -486,6 +488,7 @@
 		07754DF72DDFD39700280654 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B7D6C0592F151B5200B166F4 /* PrivacyProtection.swift */,
 				07754DF42DDFD39700280654 /* AdaptiveDebugStorage.swift */,
 				07754DF52DDFD39700280654 /* FileEncryptUtility.swift */,
 				07754DF62DDFD39700280654 /* FileStorageUtility.swift */,
@@ -767,6 +770,7 @@
 				07754E4D2DDFD39700280654 /* GlobalPreferences.swift in Sources */,
 				07754E4E2DDFD39700280654 /* AccountMigrationView.swift in Sources */,
 				07754E4F2DDFD39700280654 /* AppRoute.swift in Sources */,
+				B7D6C05B2F151B5900B166F4 /* PrivacyProtection.swift in Sources */,
 				07754E502DDFD39700280654 /* FlowBindingTokenView.swift in Sources */,
 				07754E512DDFD39700280654 /* FuturaeService.swift in Sources */,
 			);
