@@ -6,7 +6,7 @@
 //
 import UIKit
 
-@available(iOSApplicationExtension, unavailable)
+
 final class PrivacyProtection {
 
     static let shared = PrivacyProtection()
@@ -29,7 +29,6 @@ final class PrivacyProtection {
             overlayWindow = UIWindow(frame: UIScreen.main.bounds)
         }
 
-        overlayWindow.windowLevel = UIWindow.Level.alert + 1000
         overlayWindow.backgroundColor = .clear
         overlayWindow.isHidden = false
 
