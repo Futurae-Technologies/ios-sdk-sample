@@ -30,15 +30,15 @@ struct FuturaeSampleApp: App {
                 }
             }
             .onChange(of: scenePhase) { oldPhase, newPhase in
-                           switch newPhase {
-                           case .inactive, .background:
-                               PrivacyProtection.shared.enable()
-                           case .active:
-                               PrivacyProtection.shared.disable()
-                           @unknown default:
-                               break
-                           }
-                       }
+                switch newPhase {
+                case .inactive, .background:
+                    PrivacyProtection.shared.enable()
+                case .active:
+                    PrivacyProtection.shared.disable()
+                @unknown default:
+                    break
+                }
+            }
             .onOpenURL { handleURL(url: $0) }
             .fullScreenCover(isPresented: Binding<Bool>(get: { appRoute != nil }, set: { if !$0 { appRoute = nil }})) { viewForRoute(appRoute) }
             .onReceive(NotificationCenter.default.publisher(for: .appRouteChanged)) {
