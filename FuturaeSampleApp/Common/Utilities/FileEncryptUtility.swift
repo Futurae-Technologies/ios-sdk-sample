@@ -8,6 +8,10 @@
 import Foundation
 import CommonCrypto
 
+enum EncCryptoError: Error {
+    case secRandomNumberFailed(OSStatus)
+}
+
 class FileEncryptUtility {
     private let keychainKey: String
 
@@ -17,14 +21,21 @@ class FileEncryptUtility {
     }
 
     private func ensureEncryptionKeyExists() {
-        if loadKeyFromKeychain() == nil {
-            let newKey = generateRandomEncryptionKey()
-            saveKeyToKeychain(newKey)
-        }
+        if loadKeyFromKeychain() == nil,
+           let newKey = try? generateRandomEncryptionKey() {
+           saveKeyToKeychain(newKey)
+       }
     }
 
-    private func generateRandomEncryptionKey() -> Data {
-        return Data((0..<32).map { _ in UInt8.random(in: 0...255) })
+    private func generateRandomEncryptionKey() throws -> Data {
+        var data = Data(count: 32)
+        let status = data.withUnsafeMutableBytes { buffer in
+            SecRandomCopyBytes(kSecRandomDefault, buffer.count, buffer.baseAddress!)
+        }
+        guard status == errSecSuccess else {
+            throw EncCryptoError.secRandomNumberFailed(status)
+        }
+        return data
     }
 
     private func saveKeyToKeychain(_ key: Data) {
