@@ -664,7 +664,7 @@
 			mainGroup = 07135A122D6F35EE004C84A1;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				07A345FF2EF15D7900B1A933 /* XCRemoteSwiftPackageReference "ios-sdk-beta" */,
+				07A345FF2EF15D7900B1A933 /* XCRemoteSwiftPackageReference "ios-sdk" */,
 				07A346022EF15D8B00B1A933 /* XCRemoteSwiftPackageReference "ios-adaptive-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -2419,9 +2419,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		07A345FF2EF15D7900B1A933 /* XCRemoteSwiftPackageReference "ios-sdk-beta" */ = {
+		07A345FF2EF15D7900B1A933 /* XCRemoteSwiftPackageReference "ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Futurae-Technologies/ios-sdk-beta.git";
+			repositoryURL = "https://github.com/Futurae-Technologies/ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 3.9.4;
@@ -2440,7 +2440,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		07A346002EF15D7900B1A933 /* FuturaeKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 07A345FF2EF15D7900B1A933 /* XCRemoteSwiftPackageReference "ios-sdk-beta" */;
+			package = 07A345FF2EF15D7900B1A933 /* XCRemoteSwiftPackageReference "ios-sdk" */;
 			productName = FuturaeKit;
 		};
 		07A346032EF15D8B00B1A933 /* AdaptiveKit */ = {
@@ -2450,7 +2450,7 @@
 		};
 		07A346052EF15D9A00B1A933 /* FuturaeKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 07A345FF2EF15D7900B1A933 /* XCRemoteSwiftPackageReference "ios-sdk-beta" */;
+			package = 07A345FF2EF15D7900B1A933 /* XCRemoteSwiftPackageReference "ios-sdk" */;
 			productName = FuturaeKit;
 		};
 		07A346072EF15D9A00B1A933 /* AdaptiveKit */ = {
