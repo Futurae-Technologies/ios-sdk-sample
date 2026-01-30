@@ -100,8 +100,8 @@ final class QRScannerViewModel: NSObject, ObservableObject {
             if let activation = FTRUtils.activationTokenExchangeFromQR(code) {
                 Task {
                     do {
-                        let activationCode = try await FuturaeService.client.exchangeTokenForEnrollmentActivationCode(activation.exchangeToken).execute()
-                        NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.enroll(type: .activationCode(code: activationCode)))
+                        let activationShortCode = try await FuturaeService.client.exchangeTokenForEnrollmentActivationCode(activation.exchangeToken).execute()
+                        NotificationCenter.default.post(name: .appRouteChanged, object: AppRoute.enroll(type: .shortCode(code: activationShortCode)))
                     } catch {
                         self.showAlertMessage("Failed to retrieve activation code: \(error.localizedDescription)")
                     }
