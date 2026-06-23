@@ -30,6 +30,7 @@ final class SDKConfigurationViewModel: ObservableObject {
         do {
             FuturaeService.client.enableLogging()
             try FuturaeService.client.launch(config: config)
+            NotificationCenter.default.post(name: .sdkDidLaunch, object: nil)
             prefs.save(sdkConfigData: sdkConfigData, userDefaults: sdkConfigData.savePrefs)
             prefs.saveBool(.launchSDK, value: true, userDefaults: sdkConfigData.saveLaunch)
         } catch {

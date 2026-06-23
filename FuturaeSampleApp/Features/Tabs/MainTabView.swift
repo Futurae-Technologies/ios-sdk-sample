@@ -18,6 +18,7 @@ struct MainTabView: View {
             if !FuturaeService.client.sdkIsLaunched {
                 FuturaeService.client.enableLogging()
                 try FuturaeService.client.launch(config: GlobalPreferences.shared.sdkConfigData.ftrConfig)
+                NotificationCenter.default.post(name: .sdkDidLaunch, object: nil)
             }
         } catch {
             self._error = .init(initialValue: error)
