@@ -131,7 +131,7 @@ struct AuthApprovalView: View {
                 RoundedButton(title: String.approve, icon: ImageAsset.approve, action: { viewModel.replyAuth(.approve) }, style: .success, isFullWidth: true)
                 
                 switch viewModel.authType {
-                case .offlineQR:
+                case .offlineQR, .url:
                     EmptyView()
                 default:
                     HStack(spacing: 16) {
