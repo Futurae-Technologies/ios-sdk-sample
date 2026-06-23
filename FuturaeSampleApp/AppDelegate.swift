@@ -12,6 +12,8 @@ import FuturaeKit
 import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    private(set) var pendingDeviceToken: Data?
+
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
@@ -19,8 +21,13 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         setupNotificationCenter(application)
         setupNavigationBarAppearance()
         setupTabBarAppearance()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(onSDKDidLaunch), name: .sdkDidLaunch, object: nil)
+
         return true
+    }
+
+    @objc private func onSDKDidLaunch() {
+        registerPendingPushTokenIfNeeded()
     }
 }
 
@@ -88,8 +95,21 @@ extension AppDelegate {
         _ application: UIApplication,
         didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
     ) {
-        guard FuturaeService.client.sdkIsLaunched else { return }
-        
+        guard FuturaeService.client.sdkIsLaunched else {
+            pendingDeviceToken = deviceToken
+            return
+        }
+
+        registerPushToken(deviceToken)
+    }
+
+    private func registerPendingPushTokenIfNeeded() {
+        guard let token = pendingDeviceToken else { return }
+        pendingDeviceToken = nil
+        registerPushToken(token)
+    }
+
+    private func registerPushToken(_ deviceToken: Data) {
         Task {
             do {
                 try await FuturaeService.client.registerPushToken(deviceToken).execute()
