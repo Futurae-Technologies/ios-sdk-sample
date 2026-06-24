@@ -187,6 +187,7 @@ extension AppDelegate {
             }
             
             try? FuturaeService.client.deleteAccount(account)
+            NotificationCenter.default.post(name: .accountsChanged,object: nil)
         case .arbitraryNotification:
             break
         default:
