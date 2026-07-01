@@ -185,9 +185,32 @@ extension AppDelegate {
             guard let userId = data.userId, let account = try? FuturaeService.client.getAccountByUserId(userId) else {
                 return
             }
-            
+
+            let displayName = account.username?.isEmpty == false ? account.username! : userId
             try? FuturaeService.client.deleteAccount(account)
-            NotificationCenter.default.post(name: .accountsChanged,object: nil)
+            NotificationCenter.default.post(name: .accountsChanged, object: nil)
+
+            if UIApplication.shared.applicationState == .active {
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Account Unenrolled",
+                                                  message: "\(displayName) has been unenrolled.",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    UIApplication.shared.connectedScenes
+                        .compactMap { $0 as? UIWindowScene }
+                        .flatMap { $0.windows }
+                        .first { $0.isKeyWindow }?
+                        .rootViewController?
+                        .present(alert, animated: true)
+                }
+            } else {
+                let content = UNMutableNotificationContent()
+                content.title = "Account Unenrolled"
+                content.body = "\(displayName) has been unenrolled."
+                content.sound = .default
+                let request = UNNotificationRequest(identifier: "unenroll-\(userId)", content: content, trigger: nil)
+                UNUserNotificationCenter.current().add(request)
+            }
         case .arbitraryNotification:
             break
         default:
