@@ -164,6 +164,30 @@ extension AppDelegate {
         completionHandler()
     }
     
+    func notifyUser(title : String, message : String, userId : String) {
+        DispatchQueue.main.async {
+            if UIApplication.shared.applicationState == .active {
+                let alert = UIAlertController(title: title,
+                                              message: message,
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                UIApplication.shared.connectedScenes
+                    .compactMap { $0 as? UIWindowScene }
+                    .flatMap { $0.windows }
+                    .first { $0.isKeyWindow }?
+                    .rootViewController?
+                    .present(alert, animated: true)
+            } else {
+                let content = UNMutableNotificationContent()
+                content.title = title
+                content.body = message
+                content.sound = .default
+                let request = UNNotificationRequest(identifier: "unenroll-\(userId)", content: content, trigger: nil)
+                UNUserNotificationCenter.current().add(request)
+            }
+        }
+    }
+    
     func handleNotification(userInfo: [AnyHashable: Any]){
         // FuturaeService.client.handleNotification(userInfo, delegate: self) // Instead of delegating to the SDK let's handle it ourselves
         let data = FTRUtils.notificationInfoFromPayload(userInfo)
@@ -185,9 +209,17 @@ extension AppDelegate {
             guard let userId = data.userId, let account = try? FuturaeService.client.getAccountByUserId(userId) else {
                 return
             }
-            
-            try? FuturaeService.client.deleteAccount(account)
-            NotificationCenter.default.post(name: .accountsChanged,object: nil)
+
+            let username = account.username ?? ""
+            let displayName = username.isEmpty ? userId : username
+
+            do {
+                try FuturaeService.client.deleteAccount(account)
+                NotificationCenter.default.post(name: .accountsChanged, object: nil)
+                notifyUser(title: "Account Unenrolled", message: "\(displayName) has been unenrolled.", userId : userId)
+            } catch {
+                notifyUser(title: "Unenrollment Failed", message: "A request to unenroll \(displayName) was received, but something went wrong while removing the account.", userId : userId)
+            }
         case .arbitraryNotification:
             break
         default:
