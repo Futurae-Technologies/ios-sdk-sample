@@ -186,30 +186,56 @@ extension AppDelegate {
                 return
             }
 
-            let displayName = account.username?.isEmpty == false ? account.username! : userId
-            try? FuturaeService.client.deleteAccount(account)
-            NotificationCenter.default.post(name: .accountsChanged, object: nil)
+            let username = account.username ?? ""
+            let displayName = username.isEmpty ? userId : username
 
-            if UIApplication.shared.applicationState == .active {
+            do {
+                try FuturaeService.client.deleteAccount(account)
+                NotificationCenter.default.post(name: .accountsChanged, object: nil)
+
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Account Unenrolled",
-                                                  message: "\(displayName) has been unenrolled.",
-                                                  preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default))
-                    UIApplication.shared.connectedScenes
-                        .compactMap { $0 as? UIWindowScene }
-                        .flatMap { $0.windows }
-                        .first { $0.isKeyWindow }?
-                        .rootViewController?
-                        .present(alert, animated: true)
+                    if UIApplication.shared.applicationState == .active {
+                        let alert = UIAlertController(title: "Account Unenrolled",
+                                                      message: "\(displayName) has been unenrolled.",
+                                                      preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default))
+                        UIApplication.shared.connectedScenes
+                            .compactMap { $0 as? UIWindowScene }
+                            .flatMap { $0.windows }
+                            .first { $0.isKeyWindow }?
+                            .rootViewController?
+                            .present(alert, animated: true)
+                    } else {
+                        let content = UNMutableNotificationContent()
+                        content.title = "Account Unenrolled"
+                        content.body = "\(displayName) has been unenrolled."
+                        content.sound = .default
+                        let request = UNNotificationRequest(identifier: "unenroll-\(userId)", content: content, trigger: nil)
+                        UNUserNotificationCenter.current().add(request)
+                    }
                 }
-            } else {
-                let content = UNMutableNotificationContent()
-                content.title = "Account Unenrolled"
-                content.body = "\(displayName) has been unenrolled."
-                content.sound = .default
-                let request = UNNotificationRequest(identifier: "unenroll-\(userId)", content: content, trigger: nil)
-                UNUserNotificationCenter.current().add(request)
+            } catch {
+                DispatchQueue.main.async {
+                    if UIApplication.shared.applicationState == .active {
+                        let alert = UIAlertController(title: "Unenrollment Failed",
+                                                      message: "A request to unenroll \(displayName) was received, but something went wrong while removing the account.",
+                                                      preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default))
+                        UIApplication.shared.connectedScenes
+                            .compactMap { $0 as? UIWindowScene }
+                            .flatMap { $0.windows }
+                            .first { $0.isKeyWindow }?
+                            .rootViewController?
+                            .present(alert, animated: true)
+                    } else {
+                        let content = UNMutableNotificationContent()
+                        content.title = "Unenrollment Failed"
+                        content.body = "A request to unenroll \(displayName) was received, but something went wrong while removing the account."
+                        content.sound = .default
+                        let request = UNNotificationRequest(identifier: "unenroll-error-\(userId)", content: content, trigger: nil)
+                        UNUserNotificationCenter.current().add(request)
+                    }
+                }
             }
         case .arbitraryNotification:
             break
