@@ -13,4 +13,5 @@ extension Notification.Name {
     static let authenticationProcessed = Notification.Name("authenticationProcessed")
     static let qrTabRequested = Notification.Name("qrTabRequested")
     static let sdkDidLaunch = Notification.Name("sdkDidLaunch")
+    static let accountsTabRequested = Notification.Name("accountsTabRequested")
 }

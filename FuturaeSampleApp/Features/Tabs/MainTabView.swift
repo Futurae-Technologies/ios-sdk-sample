@@ -75,6 +75,7 @@ struct MainTabView: View {
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: .qrTabRequested)) { _ in self.selectedTab = 1 }
+        .onReceive(NotificationCenter.default.publisher(for: .accountsTabRequested)) { _ in self.selectedTab = 0 }
         .alert(isPresented: Binding<Bool>(
             get: { error != nil },
             set: { if !$0 { error = nil } }
