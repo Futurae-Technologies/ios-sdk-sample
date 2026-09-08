@@ -49,6 +49,7 @@ final class EnrollmentViewModel: ObservableObject {
                     await MainActor.run {
                         self.newAccount = lastAccount
                         self.isLoading = false
+                        self.requestAccountsTabIfNeeded()
                     }
                 } else {
                     await MainActor.run {
@@ -64,7 +65,12 @@ final class EnrollmentViewModel: ObservableObject {
             }
         }
     }
-    
+
+    private func requestAccountsTabIfNeeded() {
+        guard case .shortCode = enrollType else { return }
+        NotificationCenter.default.post(name: .accountsTabRequested, object: nil)
+    }
+
     func enrollParameters() throws -> EnrollParameters {
         if prefs.sdkConfigData.lockType == .sdkPinWithBiometricsOptional && !isSDKPinSet {
             return try prefs.flowBinding ? parametersWithSDKPINWithBinding() : parametersWithSDKPIN()
