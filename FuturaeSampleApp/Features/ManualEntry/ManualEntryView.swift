@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ManualEntryView: View {
     @StateObject private var viewModel = ManualEntryViewModel()
+    @FocusState private var isCodeFieldFocused: Bool
 
     var body: some View {
         NavigationStack {
@@ -34,6 +35,7 @@ struct ManualEntryView: View {
                         .disableAutocorrection(true)
                         .accessibilityIdentifier("manual_entry_input")
                         .overlay(Rectangle().frame(height: 2).foregroundColor(Color.textDark), alignment: .bottom)
+                        .focused($isCodeFieldFocused)
                         .onChange(of: viewModel.shortCode) { viewModel.formatActivationCode($1)}
                         
                     
@@ -45,6 +47,8 @@ struct ManualEntryView: View {
                 .padding(.horizontal, 30)
                 .padding(.bottom, 40)
             }
+            .contentShape(Rectangle())
+            .onTapGesture { isCodeFieldFocused = false }
             .navigationTitle(String.bottomNavigationManualEntryItem)
             .navigationBarTitleDisplayMode(.inline)
         }
